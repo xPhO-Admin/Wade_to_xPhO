@@ -1,2 +1,2 @@
-# Road_to_VPhO
-Source code LaTeX of "Road_to_VPhO" project - xPhO Physics Club.
+# Wade to xPhO
+Source code LaTeX of "Wade to xPhO" project - xPhO Physics Club.
