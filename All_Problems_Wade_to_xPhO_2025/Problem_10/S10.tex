@@ -1,0 +1,108 @@
+\textbf{1.} Thực chất, mô hình của bài toán này chính xác là một giao thoa kế Febry-Pérot!
+
+\textit{Cách 1: Phản xạ và truyền qua vô hạn lần}
+\begin{equation}
+\begin{split}
+    B_{1} &= A_1 \Gamma - A_1 \left( 1 - \Gamma^2 \right) \Gamma T^2 \sum_{i=0}^\infty \left( \Gamma^2 T^2 \right)^i = A_1 \Gamma \left[ 1 - \dfrac{\left( 1 - \Gamma^2 \right) T^2}{1 - \Gamma^2 T^2} \right] = A_1 \dfrac{\Gamma \left( 1 - T^2 \right)}{1 - \Gamma^2 T^2}, \\
+    B_2 &= A_1 T \left( 1 - \Gamma^2 \right) \sum_{i=0}^\infty \left( \Gamma^2 T^2 \right)^i = A_1 \dfrac{ T \left( 1 - \Gamma^2 \right)}{1 - \Gamma^2 T^2} .
+\end{split}
+\end{equation}
+
+\textit{Cách 2: Áp dụng các điều kiện biên}
+
+Bên trong tấm vật liệu, sóng phát ra từ mặt 1 là \(C_1\), sóng đập vào mặt 1 là \(D_1\), sóng phát ra từ mặt 2 là \(C_2\) và sóng đập vào mặt 2 là \(D_2\).
+
+Xét các sóng phản xạ và truyền qua tại mặt 2, ta được
+\begin{align}
+    B_2 &= \sqrt{1-\Gamma^2} C_2 \Rightarrow C_2 = \dfrac{B_2}{\sqrt{1-\Gamma^2}}, \\
+    D_2 &= \Gamma C_2 = \dfrac{\Gamma}{\sqrt{1-\Gamma^2}} B_2.
+\end{align}
+
+Sóng khi truyền giữa mặt 1 và mặt 2 với hệ số truyền \(T\) cho phép ta tìm lại các sóng tại mặt 1 trong tấm vật liệu \(C_1\) và \(D_1\) theo sóng truyền qua tấm \(B_2\).
+\begin{align}
+    C_2 &= C_1 T \Rightarrow C_1 = \dfrac{B_2}{T \sqrt{1-\Gamma^2}}, \\
+    D_2 &= \dfrac{D_1}{T} \Rightarrow D_1 = T \dfrac{\Gamma}{\sqrt{1-\Gamma^2}} B_2.
+\end{align}
+Xét các sóng truyền qua và phản xạ tại mặt 1, ta lần lượt tìm được \(B_2\) và \(B_1\) theo \(A_1\).
+\begin{equation}
+    C_1 =- \Gamma D_1 + \sqrt{ 1 - \Gamma^2 } A_1 \Rightarrow B_2 = \dfrac{T \left( 1 - \Gamma^2 \right)}{1 - T^2 \Gamma^2} A_1.
+\end{equation}
+
+\begin{equation}
+    B_1 = \Gamma A_1 + \sqrt{1 - \Gamma^2} D_1 = A_1 \dfrac{\Gamma \left( 1 - T^2 \right)}{1 - \Gamma^2 T^2}.
+\end{equation}
+
+
+Từ các tính toán trên, ta thu được các biểu thức về bộ tham số tán xạ \(S\)
+
+\begin{equation}
+\begin{split}
+    S_{11} &= \dfrac{ \Gamma \left( 1 - T^2 \right)}{1 - \Gamma^2 T^2}, \\
+    S_{21} &= \dfrac{ T \left( 1 - \Gamma^2 \right)}{1 - \Gamma^2 T^2}.
+\end{split}
+\end{equation}
+
+Đặt
+\begin{equation}
+    x = \dfrac{S_{11}^2 - S_{21}^2 + 1}{2 S_{21}}.
+\end{equation}
+Ta thu được
+\begin{equation}
+\begin{split}
+    \Gamma &= x \pm \sqrt{x^2 -1}, \\
+    T &= \dfrac{S_{11}+S_{21} - \Gamma}{ 1 - \left( S_{11} + S_{21} \right) \Gamma}.
+\end{split}
+\end{equation}
+
+\textbf{2.} Áp dụng điều kiện biên giữa hai môi trường đối với thành phần song song bề mặt của vector cường độ điện trường và vector cường độ từ trường:
+\begin{align}
+    E_I + E_R &= E_T, \\
+    B_I - B_R &= B_T.
+\end{align}
+
+Với \(E_R = -\Gamma E_I\), \(B_R = -\Gamma B_I\), \(E_I = Z_0 B_I\), \(E_T = Z_0 z B_T\), \(Z_0 = \sqrt{\mu_0/\varepsilon_0} = \SI{377}{\ohm}\). Chia 2 về của 2 phương trình trên, ta được
+\begin{equation}
+    z = \dfrac{1 - \Gamma}{1 + \Gamma}.
+\end{equation}
+Từ đây, ta dẫn đến điều cần chứng minh.
+
+\textbf{3.} Hệ số truyền \(T\) có thể được tính bằng
+\begin{equation}
+    T = \exp \left( i \dfrac{2 \pi n f}{c} d \right).
+\end{equation}
+có nghĩa là
+\begin{equation}
+    n = -i \dfrac{c}{2 \pi f d} \left[ \ln \left( T \right) + 2 \pi m i \right],
+\end{equation}
+với \(m\) là một số nguyên.
+
+Với mỗi giá trị \(m\) khác nhau, ta thu được một kết quả tính chiết suất \(n\) khác nhau. Điều này được bắt nguồn từ việc ta không thể phân biệt giữa các pha lệch nhau \(2 \pi\). Ở trong một số bài toán cụ thể, ta có thể dựa vào việc so sánh độ dày \(d\) và bước sóng để loại bỏ đi các kết quả vô lý.
+
+\textbf{4.}
+
+Với \(d\) rất nhỏ so với bước sóng thì \(m=0\).
+
+Nhân chiết suất \(n\) với trở kháng sóng chuẩn hóa \(z\), ta được 
+\begin{equation}
+    \mu = n z
+\end{equation}
+
+Chia chiết suất \(n\) với trở kháng chuẩn hóa \(z\), ta được
+\begin{equation}
+    \varepsilon = \frac{n}{z}.
+\end{equation}
+
+Thay số cho các tính toán, ta được
+\begin{align}
+    z &= 0.523, \\
+    n &= 1.91, \\
+    \varepsilon &= 3.66, \\
+    \mu &= 1.00.
+\end{align}
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{Chen2004} Chen, Xudong, et al. "Robust method to retrieve the constitutive effective parameters of metamaterials." \textit{Physical Review E—Statistical, Nonlinear, and Soft Matter Physics} 70.1 (2004): 016608.
+\bibitem{Batronix} SIGLENT Technologies. Measurement of Dielectric Material Properties. Batronix, n.d. PDF file. \url{https://www.batronix.com/files/Siglent/VNA/SNA5000A/SNA5000A/Manuals/Measurement-of-Dielectric-Material-Properties.pdf}
+\end{thebibliography}

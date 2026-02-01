@@ -1,0 +1,106 @@
+\textbf{1.} 
+
+\textbf{1a.} Xét một phần tử chất lỏng tại mặt phân cách giữa hai môi trường. Để phần tử chất lỏng này cân bằng, các lực tiếp tuyến tác dụng vào phần tử từ các phía phải bằng nhau, tức áp suất trên toàn bộ mặt ngăn cách giữa hai môi trường bằng nhau. Như vậy, mặt phân cách giữa hai môi trường phải là một "mặt đẳng áp"\footnote{Các lời giải thích khác xuất phát từ \(\nabla \times \rho \mathbf{g'} = 0\) dẫn tới hàm áp suất \(p\) là hàm thế vị có ý nghĩa tương tự.}.
+
+Phân bố áp suất chất lỏng ở trong hai miền chất lỏng \(\rho_1\) và \(\rho_2\) lần lượt tuân theo hai biểu thức:
+\begin{equation}
+    p_1(r,z) = p_{10} - \rho_1 g z + \rho_1 \dfrac{\omega^2r^2}{2g},
+\end{equation}
+và
+\begin{equation}
+    p_2(r,z) = p_{20} - \rho_2 g z + \rho_2 \dfrac{\omega^2r^2}{2g},
+\end{equation}
+trong đó, \(p_{10}\) và \(p_{20}\) là hai hằng số thể hiện gốc tính áp suất tương đối.
+
+Tại mặt ngăn cách giữa hai môi trường thì \(p_1(r,z) = p_2(r,z)\), tức là mặt ngăn cách này có phương trình mô tả bề mặt
+\begin{equation}
+    z = \dfrac{\omega^2 r^2}{2g} + \dfrac{p_{20} - p_{10}}{g\left( \rho_2 - \rho_1 \right)}.
+\end{equation}
+
+Như vậy, mặt ngăn cách giữa hai môi trường là một mặt Paraboloid.
+
+\textbf{1b.}
+
+\textit{\textbf{Lưu ý:} Dựa vào một phép tích phân cơ bản, ta có thể chứng minh rằng mặt Paraboloid bên trên chia hình trụ bản kính \(r\) độ cao \(z\) thành hai khối có thể tích bằng nhau và bằng một nửa thế tích hình trụ.}
+
+Trường hợp mặt nước phân bổ như hình \ref{fig:Rotating_cup}b xảy ra khi thể tích chất lỏng \(\rho_1\) lớn hơn nửa dưới hình trụ bán kính R được chia bởi Paraboloid, tức là
+\begin{equation}
+    \pi R^2 h_1 \ge \dfrac{1}{2} \pi R^2 \dfrac{\omega_1^2 R^2}{2g} \Rightarrow \omega_1 \le 2 \dfrac{ \sqrt{g h_1}}{R}.
+\end{equation}
+
+Trường hợp \ref{fig:Rotating_cup}d xảy ra khi tổng thể tích hai chất lỏng nhỏ hơn nửa dưới hình trụ bán kính \(R\) được chia bởi Paraboloid, tức là
+\begin{equation}
+    \pi R^2 \left( h_1 + h_2 \right) \le \dfrac{1}{2} \pi R^2 \dfrac{\omega_3^2 R^2}{2g} \Rightarrow \omega_3 \ge 2 \dfrac{ \sqrt{g \left( h_1 + h_2 \right) }}{R}.
+\end{equation}
+
+Trường hợp còn lại như hình \ref{fig:Rotating_cup}c xảy ra khi
+\begin{equation}
+    2 \dfrac{ \sqrt{g h_1 }}{R} \le \omega_2 \le 2 \dfrac{ \sqrt{g \left( h_1 + h_2 \right)}}{R}
+\end{equation}
+
+\textbf{1c.}
+
+Gọi bán kính của vùng đáy bình không chưa chất lỏng ở hình \ref{fig:Rotating_cup}d là \(R_0\).
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Problem_1/Figs_P1/Boolean_water.pdf}
+    \caption{Cách tính thể tích phần chất lưu hình \ref{fig:Rotating_cup}d.}
+    \label{fig:Boolean_water}
+\end{figure}
+
+Thể tích tổng lượng chất lỏng lúc sau (được tính theo hình \ref{fig:Boolean_water}) bằng với thể tích chất lưu lúc đầu nên
+\begin{equation}
+    \dfrac{1}{2} \pi R^2 \dfrac{\omega^2 R^2}{2g} + \dfrac{1}{2} \pi R_0^2 \dfrac{\omega^2 R_0^2}{2g} - \pi R^2 \dfrac{\omega^2 R_0^2}{2g} = \pi R^2 \left( h_1 + h_2 \right) \Rightarrow R_0 = \sqrt{R^2 - 2 R \sqrt{\dfrac{g\left( h_1 + h_2 \right)}{\omega^2}}}.
+\end{equation}
+
+Độ cao của mực nước là
+\begin{equation}
+    z_{max} = \dfrac{\omega^2 R^2}{2g} - \dfrac{\omega^2 R_0^2}{2g} = R \sqrt{\dfrac{\omega^2 \left( h_1 + h_2 \right)}{g}.}
+\end{equation}
+
+\textbf{2.}
+
+Phân bố khối lượng riêng được chia thành 2 dạng hàm khác nhau (hình \ref{fig:Density_distribution}a). Với miền giá trị \(z - \dfrac{\omega^2 r^2}{2g} \ge 0\), các lớp nước có cùng độ dày, đồng dạng và tịnh tiến theo phương thẳng đứng. Mặt khác, trong miền giá trị \(z - \dfrac{\omega^2 r^2}{2g} \le 0\), các lớp cùng khối lượng riêng không còn có độ dày bằng nhau, yêu cầu các tính toán cẩn thận và phức tạp hơn.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Problem_1/Figs_P1/Density_distribution.pdf}
+    \caption{\textbf{(a)} Phân bố khối lượng riêng trong cốc nước, màu hồng nhạt ở giữa ứng với lượng chất lỏng có khối lượng riêng nằm trong dải giá trị \(\rho_0 \left( 1 - \alpha \dfrac{\omega^2 R^2}{4g} \right)\) đến \(\rho(z,R)\); \textbf{(b)} Cách tính thể tích lượng chất lỏng có khối lượng riêng nằm trong dải giá trị \(\rho_0 \left( 1 - \alpha \dfrac{\omega^2 R^2}{4g} \right)\) đến \(\rho(z,R)\).}
+    \label{fig:Density_distribution}
+\end{figure}
+
+Với \(z - \dfrac{\omega^2 r^2}{2g} \ge 0\)
+
+\begin{equation}
+    \rho = \rho_0 \left[ 1 + \alpha \left( - z + \dfrac{\omega^2 r^2}{2g} - \dfrac{\omega^2 R^2}{4g} \right) \right]
+\end{equation}
+
+
+Với \(z - \dfrac{\omega^2 r^2}{2g} \le 0\)
+
+Theo hình \ref{fig:Density_distribution}b, thể tích lượng nước có khối lượng riêng nằm trong dải giá trị từ \(\rho_0 \left( 1 - \alpha \dfrac{\omega^2 R^2}{4g} \right)\) đến \(\rho(R, z)\) là
+\begin{equation}
+    \dfrac{\rho(R, z) - \rho_0 \left( 1 - \alpha \dfrac{\omega^2 R^2}{4g} \right)}{\rho_0 \alpha} \pi R^2  = \left( \dfrac{\omega^2 R^2}{2g} - z \right) \pi R^2 - \dfrac{1}{2} \left( \dfrac{\omega^2 R^2}{2g} - z \right) \pi \left( R^2 - \dfrac{2gz}{\omega^2} \right).
+\end{equation}
+
+Giải phương trình trên, ta được
+\begin{equation}
+    \rho (R, z) = \rho_0 \left( 1 - \alpha \dfrac{g z^2}{\omega^2 R^2} \right).
+\end{equation}
+
+Theo phương trình điều kiện mặt đẳng thế
+
+\begin{equation}
+    \rho (r, z) = \rho \left( R, z + \dfrac{\omega^2 (R^2 - r^2)}{2g} \right) = \rho_0 \left[ 1 - \alpha \dfrac{g}{\omega^2 R^2} \left( z + \dfrac{\omega^2R^2}{2 g} - \dfrac{\omega^2 r^2}{2g} \right)^2 \right].
+\end{equation}
+
+Vậy
+\begin{equation}
+    \rho (r,z) = \left\{
+    \begin{array}{cll}
+        \rho_0 \left[ 1 - \alpha \left( z - \dfrac{\omega^2 r^2}{2g} + \dfrac{\omega^2 R^2}{4g} \right) \right], & \text{nếu} \ z - \dfrac{\omega^2 r^2}{2g} \ge 0, \\
+        \rho_0 \left[ 1 - \alpha \dfrac{g}{\omega^2 R^2} \left( z - \dfrac{\omega^2 r^2}{2g} + \dfrac{\omega^2R^2}{2 g} \right)^2 \right], & \text{nếu} \ z - \dfrac{\omega^2 r^2}{2g} \le 0.
+    \end{array}
+    \right.
+\end{equation}

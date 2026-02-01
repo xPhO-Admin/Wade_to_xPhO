@@ -1,0 +1,133 @@
+
+Sao lùn trắng là tàn dư của những ngôi sao khối lượng nhỏ và trung bình sau khi hết nhiên liệu hạt nhân. Chúng chỉ lớn cỡ Trái Đất nhưng nặng tương đương Mặt Trời, nên mật độ cực kỳ cao. Không còn phản ứng nhiệt hạch, sao lùn trắng được giữ ổn định nhờ áp lực của electron suy biến – một hệ quả của nguyên lý Pauli trong cơ học lượng tử, ngăn không cho các electron chiếm cùng trạng thái 4 số lượng tử. Khối lượng tối đa mà áp lực này có thể chống lại lực hấp dẫn gọi là giới hạn Chandrasekhar (Khoảng 1.44 lần khối lượng Mặt Trời). Vượt quá giới hạn này, sao sẽ sụp đổ thành sao neutron hoặc phát nổ siêu tân tinh.
+\vspace{2mm}
+
+Electron bên trong sao lùn trắng tuân theo phân bố Fermi-Dirac. Mật độ các mức trạng thái theo động lượng của một hệ khí Fermion có cùng khối lượng m trong thể tích V được cho bởi công thức: 
+\[
+\rho(p) = g\,\frac{V}{2\pi^2\hbar^3}p^2
+\]
+
+\begin{align*}
+\text{Trong đó:} \quad 
+& \rho(p): && \text{Số trạng thái trên một đơn vị động lượng} \\
+& g: && \text{Hệ số suy biến (} g = 2 \text{ đối với khí electron)} \\
+& V: && \text{Thể tích của hệ} \\
+& p: && \text{Độ lớn của vector xung lượng } (p = |\mathbf{p}|) \\
+& \hbar: && \text{Hằng số Planck rút gọn } \left(\hbar = \frac{h}{2\pi}\right)
+\end{align*}
+
+Số lượng hạt khí Fermion trung bình có trạng thái năng lượng $E$ là: 
+\[
+\bar{n}(E) = \frac{1}{1+ \exp\!\left[\dfrac{E - \mu}{k_B T}\right] }
+\]
+
+\begin{align*}
+\text{Trong đó:} \quad
+& \bar{n}(E): && \text{số hạt trung bình có năng lượng } E \text{ (hàm phân bố Fermi–Dirac)} \\
+& \mu: && \text{thế hoá học (chemical potential), tại } T=0 \text{ là năng lượng Fermi } E_F \\
+& k_B: && \text{hằng số Boltzmann} \\
+& T: && \text{nhiệt độ tuyệt đối (tính theo Kelvin)} \\
+& E: && \text{năng lượng của trạng thái đang xét}
+\end{align*}
+
+
+\begin{enumerate}
+
+\item Khí electron ở trạng thái suy biến hoàn toàn.
+
+Bởi vì sao lùn trắng có mật độ electron rất lớn thế nên năng lượng Fermi cũng như động lượng Fermi rất lớn làm cho tốc độ của electron có thể được so sánh với tốc độ ánh sáng trong chân không, do đó ta cần xét đến hiệu ứng tương đối tính. Dù nhiệt độ sao lùn trắng có thể lên tới hàng triệu K, thế nhưng nhiệt độ đó thường rất bé so với nhiệt độ Fermi \((T_F \sim E_F/k_b)\) dẫn tới hệ khí electron này bị suy biến hoàn toàn.
+\begin{enumerate}
+    \item Trong trường hợp khí electron bị suy biến hoàn toàn, hãy lập luận và tính số hạt electron trung bình có trạng thái động lượng $p>p_F$ và $p<p_F$.
+    \item Bằng cách chuẩn hóa số hạt electron, xác định động lượng Fermi theo mật độ số hạt trong sao.
+    \item Dựa vào định nghĩa áp suất là tổng thông lượng động lượng của khí electron qua một mặt ảo trên một đơn vị diện tích trên một đơn vị thời gian. Chứng minh áp suất do hệ khí electron gây ra là: 
+    \[
+P_e = \frac{8\pi}{3h^3}\int_0^\infty \,\bar n(p)\,p^3\,v(p)\,\mathrm{d}p
+\]
+
+    \item Thiết lập biểu thức áp suất, mật độ động năng theo thể tích của hệ khí electron trong sao lùn trắng. Biểu diễn theo $p_F$
+
+Cho biết:
+\[
+\int_{0}^{x} \frac{\xi^{4}\,\mathrm{d}\xi}{(1+\xi^{2})^{1/2}}
+= \frac{1}{8}\Bigl[\,x(2x^{2}-3)\sqrt{1+x^{2}}
+\;+\; 3\ln\!\bigl(x+\sqrt{1+x^{2}}\bigr)\Bigr].
+\]
+
+\[
+\int_{0}^{x} \bigl(\sqrt{1+\xi^{2}} - 1\bigr)\,\xi^{2}\, \mathrm{d}\xi=
+\left\{
+\frac{1}{8}\Big[x(2x^{2}+1)\sqrt{1+x^{2}}-\operatorname{arsinh}x\Big]
+-\frac{x^{3}}{3}
+\right\}.
+\]
+
+\end{enumerate}
+\item Khí electron siêu tương đối tính
+
+\begin{enumerate}
+    \item Hãy dựa vào điều kiện của $p_F$ trong trường hợp siêu tương đối tính, suy ra áp suất và mật độ động năng theo mật độ hạt của hệ khí. Cho biết \( \displaystyle
+\lim_{x \to \infty} \frac{\ln x}{x^{\alpha}} = 0 \quad \text{với mọi } \alpha > 0
+\)
+    \item Biểu diễn áp suất theo mật độ động năng trung bình của sao lùn trắng ở trạng thái suy biến hoàn toàn và siêu tương đối tính.
+\end{enumerate}
+
+\item Giới hạn Chandrasekhar
+
+Vào năm 1930, nhà vật lý người Ấn Độ - Giáo sư Subrahmanyan Chandrasekhar (1910–1995) đã nghiên cứu tính ổn định của các ngôi sao (đặc biệt là sao lùn trắng). Phần này này sẽ giúp bạn nghiên cứu về giới hạn Chandrasekhar.
+
+
+Do tác dụng của lực hấp dẫn, mật độ khối lượng của các sao lùn trắng không phải là một hằng số. Gọi $m(r)$ là tổng khối lượng định xứ bên trong quả cầu bán kính $r$ và có tâm trùng với tâm sao, $\phi(r),P(r),\rho_m(r)$ là thế hấp dẫn, áp suất và mật độ khối lượng tại vị trí cách tâm khoảng r. Chọn mốc thế hấp dẫn tại vị trí rìa của sao (\(\rho_m=0\)).
+\begin{enumerate}
+    \item Một sao lùn trắng khi đạt trạng thái suy biến hoàn toàn và siêu tương đối tính thì vật chất trong sao bị ion hóa toàn toàn. Do khối lượng của các electron là rất bé so với các hạt sơ cấp trong hạt nhân, khối lượng sao lùn trắng phần lớn đến từ ion. Chứng minh mối liên hệ giữa khối lượng riêng \(\rho_m\) sao lùn trắng và mật độ hạt electron trong sao theo khối lượng nguyên tử $m_u$ và \(\mu_e =A/Z\): Đại lượng đặc trưng cho vật chất cấu tạo nên sao.
+    \item Chứng minh phương trình vi phân: 
+\begin{equation}
+\frac{\mathrm{d}P}{\mathrm{d}r} = -\,\frac{\mathrm{d}\Phi}{\mathrm{d}r}\,\rho_m .
+\end{equation}
+
+    \item Dựa vào kết quả phần B, mối liên hệ giữa áp suất và mật độ khối lượng là \(P=K\rho_m^\gamma\) (polytropic gas) với \(\gamma=1+\frac{1}{n}\). Xác định hằng số $K, n$ cho sao lùn trắng ở trạng thái siêu tương đối tính và suy biến hoàn toàn và tìm $\rho_m$ theo $\Phi,K$, và $n$.
+
+    \item Đặt các hằng số không thứ nguyên: \(
+z=Cr\) với
+
+
+\begin{equation*}
+C^{2} = \frac{4\pi G}{(n+1)K}\rho_{c}^{ \frac{n-1}{n}}, \ 
+w = \frac{\Phi}{\Phi_{c}} = \left( \frac{\rho}{\rho_{c}} \right)^{1/n}.
+\end{equation*}
+
+với $\Phi_c,\rho_c$ là thế hấp dẫn và mật độ khối lượng sao lùn trắng tại $z=0$. Dẫn ra phương trình Lane-Emden cho sao lùn trắng ở trạng thái suy biến hoàn toàn và siêu tương đối tính.
+\item Nghiệm của phương trình Lane-Emden với trường hợp sao lùn trắng suy biến hoàn toàn và siêu tương đối tính không thể giải ra hàm tổng quát, nhưng chúng ta vẫn có thể xác định khối lượng sao lùn trắng nhờ vào các số liệu (được giải thông qua máy tính) ở bảng sau:
+\vspace{2mm}
+
+Cho biết \(z_n=CR_n\) là đại lượng không thứ nguyên tương ứng với bán kính rìa \(R_n\) của sao (vị trí có \(\rho=0\)) và \(\overline{\rho}= M/\displaystyle \left( \frac{4}{3} \pi R_n^3 \right)\) là khối lượng riêng trung bình của sao.
+\begin{table}[!htb]
+\centering
+\begin{tabular}{llll}
+n   & \(z_n\)    & \(\displaystyle \left(-z^2 \frac{\mathrm{d}\omega}{\mathrm{d}z} \right)_{z=z_n}\) & \(\rho_c/\overline{\rho}\)  \\ \hline
+0   & 2.4494     & 4.8988                                                        & 1.00000         \\
+1   & 3.14159    & 3.14159                                                       & 3.28987         \\
+1.5 & 3.65375    & 2.71406                                                       & 5.99071         \\
+3   & 3.89685    & 2.01824                                                       & 51.1825         \\
+5   & \(\infty\) & 1.73205                                                       & \(\infty\)     
+\end{tabular}
+\end{table}
+
+Hãy xác định khối lượng sao lùn trắng được cấu tạo từ các nguyên tử He và nhận xét về kết quả này và từ đó suy ra giới hạn Chandrasekhar (tính theo đơn vị khối lượng mặt trời \(M_{\odot} = 1.989 \times 10^{30}\ \text{kg})
+\) 
+\end{enumerate}
+
+
+
+Gợi ý:
+
+- Phương trình poisson: 
+\begin{equation}
+\frac{1}{r^{2}} \frac{\mathrm{d}}{\mathrm{d}r} \!\left( r^{2} \frac{\mathrm{d}\Phi}{\mathrm{d}r} \right) = 4\pi G\,\rho_m .
+\end{equation}
+- Phương trình Lane-Emden:
+\begin{equation}
+\frac{1}{z^{2}} \frac{\mathrm{d}}{\mathrm{d}z} \left( z^{2} \frac{\mathrm{d}w}{\mathrm{d}z} \right) + w^{n} = 0.
+\end{equation}
+
+
+\end{enumerate}

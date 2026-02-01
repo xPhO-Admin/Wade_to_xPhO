@@ -1,0 +1,98 @@
+\textbf{1a1.} Ta viết biểu thức của các sóng dưới dạng phức:
+\begin{align}
+    \Tilde{E}_I&=\Tilde{E}_{0I} \exp \left[i \left(  \omega t-(k_I \sin \theta_Iy+k_I \cos \theta_Iz) \right)   \right].\\
+    \Tilde{E}_R&=\Tilde{E}_{0R} \exp \left[i \left(  \omega t-(k_{Rx}x+k_{Ry}y+k_{Rz} z) \right)   \right].\\
+    \Tilde{E}_{T}&=\Tilde{E}_{0T} \exp \left[i \left(  \omega t-(k_{T x}x +k_{T y}y+k_{T z} z) \right)   \right].
+\end{align}
+Điều kiện biên của điện trường tại mặt phân cách ($z=0$) là:
+\begin{equation}
+    \Tilde{E}_I+\Tilde{E}_R=\Tilde{E}_{T}.
+\end{equation}
+Thay các biểu thức (1), (2), (3) vào (4), ta sẽ được một đẳng thức mới. Đẳng thức này chỉ xảy ra khi tất cả các đại lượng mũ của ba số hạng là đồng nhất:
+\begin{equation}
+    k_I \sin \theta_Iy \equiv k_{Rx}x+k_{Ry}y \equiv k_{T x}x +k_{T y}y.
+\end{equation}
+Cho các hệ số của $x,y$ bằng nhau, ta được:
+\begin{align}
+    &k_{Rx}=k_{T x}=0. \\
+    & k_{Ry}= k_{T y}= k_I \sin \theta_I.
+\end{align}
+Phương trình (6) chứng minh ý thứ nhất của định luật khúc xạ, rằng: tia phản xạ và tia khúc xạ nằm trong cùng một mặt phẳng với tia tới. Mặt khác, ta có:
+\begin{equation}
+    k_I=\frac{2 \pi}{\lambda_1}=k n_1; \quad k_{T y}=k_{T} \sin \theta_T=kn_2 \sin \theta_T.
+\end{equation}
+Thay (8) vào (7), ta được công thức nổi tiếng của định luật khúc xạ:
+\begin{equation}
+    n_1 \sin \theta_I=n_2 \sin \theta_T.
+\end{equation}
+
+\textbf{1a2.} Điều kiện biên đối với cường độ từ trường tại mặt phân cách là:
+\begin{equation}
+    \Tilde{H}_{0I} \cos \theta_I-  \Tilde{H}_{0R} \cos \theta_I= \Tilde{H}_{0 T} \cos \theta_T.
+\end{equation}
+Từ (4) và (5), ta cũng có được:
+\begin{equation}
+    \Tilde{E}_{0I}+\Tilde{E}_{0R}=\Tilde{E}_{0 T}.
+\end{equation}
+Trong sóng điện từ phẳng, mật độ năng lượng thể tích của điện trường và từ trường là như nhau:
+\begin{equation}
+    w_M=\frac{\mu_0 \mu H^2}{2}=w_E=\frac{\varepsilon_0 \varepsilon E^2}{2}.
+\end{equation}
+Kết hợp với $n=\sqrt{\varepsilon \mu}$ và các môi trường đều là phi từ tính $\mu=1$:
+\begin{equation}
+    H=n E \sqrt{\frac{\varepsilon_0}{\mu_0}}.
+\end{equation}
+Từ các phương trình (10), (11) và (13), ta tính được hệ số phản xạ có biểu thức như sau:
+\begin{equation}
+    \Gamma=\frac{n_1 \cos \theta_I-n_2 \cos \theta_T}{n_1 \cos \theta_I+n_2 \cos \theta_T}.
+\end{equation}
+
+\textbf{1b.} Số sóng $k_{T z}$ theo phương $z$ sẽ được tính theo:
+\begin{equation}
+    k_{T z}=k_{T} \cos \theta_T=kn_2 \cos \theta_T.
+\end{equation}
+Từ phương trình (9), giá trị của $\cos \theta_T$ là:
+\begin{equation}
+    \sin \theta_T= \frac{n_1}{n_2} \sin \theta_I \Rightarrow \cos \theta_T= \pm \frac{i\sqrt{n_1^2 \sin^2 \theta_I-n_2^2}}{n_2}.
+\end{equation}
+Vì điện trường sẽ suy giảm nên đứng trước $\cos \theta_T$ sẽ là dấu "-". So sánh phương trình (3) với biểu thức của đề cho, ta thấy hệ số suy giảm $\alpha$ sẽ bằng:
+\begin{equation}
+    \alpha=-ik_{T z}=-k\sqrt{n_1^2 \sin^2 \theta_I-n_2^2}.
+\end{equation}
+
+\textbf{1c.} Thay giá trị $\cos \theta_T$ vào (14), hệ số phản xạ lúc này là:
+\begin{equation}
+    \Gamma=\frac{n_1 \cos \theta_I-i \sqrt{n_1^2 \sin ^2 \theta_I-n_2^2}}{n_1 \cos \theta_I+i \sqrt{n_1^2 \sin ^2 \theta_I-n_2^2}}=\frac{1-i\dfrac{\sqrt{n_1^2 \sin ^2 \theta_I-n_2^2}}{n_1 \cos \theta_I}}{1+i\dfrac{\sqrt{n_1^2 \sin ^2 \theta_I-n_2^2}}{n_1 \cos \theta_I}}= \frac{1-i\Delta}{ 1+ i \Delta}.
+\end{equation}
+Ta đặt $\beta= \arctan \Delta$. Khi đó:
+\begin{equation}
+\notag
+    \Gamma=\frac{1-i \tan \beta}{1+ i \tan \beta}.
+\end{equation}
+Sử dụng công thức Euler:
+\begin{equation}
+    \Gamma= \exp (-2i \arctan \Delta).
+\end{equation}
+Khi đó:
+\begin{equation}
+    \Tilde{E}_{0R}=\Tilde{E}_{0I} \exp (-2i \arctan \Delta).
+\end{equation}
+Độ lệch pha giữa sóng tới và sóng phản xạ:
+\begin{equation}
+    \varphi=-2 \arctan \Delta= -2 \arctan \dfrac{\sqrt{n_1^2 \sin ^2 \theta_I-n_2^2}}{n_1 \cos \theta_I}.
+\end{equation}
+
+\textbf{2a.} Độ lệch pha lúc này sẽ bằng $\varphi$ được tính ở phần 1 cộng thêm với độ lệch pha do sự dịch chuyển của điểm phản xạ gây ra:
+\begin{equation}
+    \phi=\varphi+ k_{Ry}.y=-2 \arctan \dfrac{\sqrt{n_1^2 \sin ^2 \theta_I-n_2^2}}{n_1 \cos \theta_I} + kn_1 \sin \theta_I y.
+\end{equation}
+
+\textbf{2b.} Theo đề:
+\begin{align}
+    &\left.\frac{d \phi}{d \theta_I}\right|_{y=s}=0 \notag \\
+    & \Rightarrow s= \frac{2 \tan \theta_I}{k n_1 \sqrt{\sin^2 \theta_I- \dfrac{n_2^2}{n_1^2}}}
+\end{align}
+Từ hình vẽ, dễ dàng xác định $ D$:
+\begin{equation}
+    D=s \cos \theta_I=\frac{\lambda \sin \theta_I}{\pi \sqrt{n_1^2 \sin^2 \theta_I-n_2^2}}
+\end{equation}

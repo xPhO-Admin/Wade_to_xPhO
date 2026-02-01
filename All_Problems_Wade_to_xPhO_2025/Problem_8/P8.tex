@@ -1,0 +1,93 @@
+Bẫy Paul là thiết bị dùng để giam giữ các ion trong không gian bằng điện trường xoay chiều tần số radio (RF). Nguyên lý hoạt động dựa trên việc điện trường dao động nhanh tạo ra một hiệu ứng trung bình gọi là lực ponderomotive, đẩy các ion về vùng có cường độ trường yếu hơn, giúp chúng dao động quanh một vị trí cân bằng. 
+
+Ứng dụng của bẫy Paul trải rộng từ khối phổ chính xác cao, lưu trữ qubit trong máy tính lượng tử, nghiên cứu tương tác ion–nguyên tử, cho đến chế tạo đồng hồ nguyên tử có độ chính xác cực cao. Với đóng góp này, nhà vật lý Wolfgang Paul đã được trao giải Nobel Vật lý năm 1989, ghi nhận tầm ảnh hưởng sâu rộng của phát minh này trong khoa học và công nghệ hiện đại.
+
+\begin{enumerate}[label=\textbf{\Alph*.}]
+    \item \textbf{Linear quadrupole trap}
+
+Bẫy Paul dạng 4 ống trụ (linear quadrupole trap) gồm bốn điện cực hình trụ song song, bố trí thành hình vuông có cạnh \(\sqrt{2} \, r_0\) khi nhìn từ mặt cắt ngang. Điện thế tạo ra trong vùng trung tâm có dạng gần đúng tứ cực, giữ ion trong mặt phẳng ngang. Trục dọc của các ống thường được dùng để dẫn ion vào hoặc ra. (hình \ref{fig:paultrap})
+
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Problem_8/Figs_P8/Paultrap.pdf}
+    \caption{Bẫy Paul}
+    \label{fig:paultrap}
+\end{figure}
+Ta xét trong mặt phẳng Oxy của bẫy Paul như hình \ref{fig:mặt cắt}. Hai trụ trên trục Ox được nối với điện thế  \(V_0\) trong khi hai trụ còn lại nối đất
+%vẽ hình mặt cắt của paul trap
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Problem_8/Figs_P8/Mặt cắt.pdf}
+    \caption{Mặt cắt bẫy}
+    \label{fig:mặt cắt}
+\end{figure}
+
+  \begin{enumerate}[label*=\arabic*.]
+        \item Vì 4 trụ của bẫy Paul được đặt rất gần nhau nên hàm điện thế trong vùng không gian bên trong bẫy có thể biểu diễn theo khai triển Taylor.
+        \begin{equation}
+            V(x,y) = V(0,0) + a\,x + b\,y + c\,x^{2} + d\,y^{2}.
+        \end{equation}
+
+Biết rằng trong vùng không gian xung quanh bẫy không có điện tích. Dựa vào điều kiện biên của điện trường và điện thế. Chứng minh rằng:
+\begin{equation}
+    V(x, y ) =\left( 1+\frac{x^{2} - y^{2}}{r_{0}^{2}} \right) \frac{V_{0}}{2}.
+\end{equation}
+
+
+
+        \item Nếu đặt vào 2 trụ điện thế một chiều. Chứng minh rằng với hàm điện thế này không thể giam giữ một hạt mang điện ổn định (Định lý Earnshaw).
+  \end{enumerate}
+
+
+
+
+    \item \textbf{Bẫy Paul hiệu chỉnh:}
+    
+    Chính vì không thể bẫy các hạt mang điện bằng thế tĩnh điện. Wolfgang Paul đã đề xuất sử dụng điện trường xoay chiều (radio-frequency, RF). Khi tần số dao động của điện trường đủ cao so với thời gian phản ứng của ion, quỹ đạo ion có thể được mô tả bởi một thế hiệu dụng ổn định. Trong thế hiệu dụng này, ion trải nghiệm một điểm cực tiểu thực sự, nhờ đó có thể bị giam giữ lâu dài. Người ta đặt hiệu điện thế \(V(t)\) vào 2 trụ dương của bẫy Paul.
+    \begin{equation}
+        V(t)=V_{DC}+V_{AC}\cos(\Omega t).
+    \end{equation}
+    \begin{enumerate}[label*=\arabic*.]
+    \item Viết phương trình vi phân biểu diễn tọa độ $x,y$ của hạt theo $\tau=\Omega t/2$. Biểu diễn theo hai thông số của bẫy là 
+    \begin{equation}
+        a=\frac{4QV_{DC}}{m\Omega^2r_o^2} \ \ \text{và} \ \  q=\frac{2QV_{AC}}{m\Omega^2r_0^2}.
+    \end{equation}
+
+\noindent
+Để biết một hạt ion có được giam ổn định hay không phụ thuộc vào giá trị cụ thể của a và q (Dựa trên biểu đồ ổn định Mathieu).
+
+%vẽ .. biểu đồ của mathieu
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Problem_8/Figs_P8/Mathieu.pdf}
+    \caption{Biểu đồ ổn định Mathieu của bẫy Paul.}
+    \label{fig:mathieu}
+\end{figure}
+
+\item Một bẫy Paul có chiều dài các điện cực là 5cm, khoảng cách gần nhất giữa hai điện cực là 3.5 mm này được sử dụng với mỗi điện áp xoay chiều với tần số 2 MHz để bẫy 1 ion \(Ca^{+}\). Hãy xác định điều kiện của điện thế hiệu dụng sao cho ion này được bẫy 1 cách ổn định.
+\vspace{2mm}
+
+Một bẫy Paul được thiết kế sao cho hệ số \(a \ll q \ll 1\). Theo phương pháp Kapitza, chuyển động của hạt ion cũng được chia thành hai chuyển động drift và quiver: 
+\begin{equation}
+    x(t) = X(t) + \epsilon_x(t) \ \ \text{và} \ \ y(t)=Y(t)+\epsilon_y(t).
+\end{equation}
+Trong đó:
+\begin{enumerate}[label = -]
+    \item \(X(t),Y(t)\) là  thành phần chuyển động chậm hay vị trí trung bình của hạt sau nhiều dao động nhanh (drift).
+    \item \(\epsilon_x(t),\epsilon_y(t) \) là thành phần dao động bé và nhanh quanh vị trí trung bình, có tần số đúng bằng tần số của điện trường áp vào (quiver). \(\epsilon_{x,y}(t) \ll X(t),Y(t)\).
+\end{enumerate}
+
+
+\item Chứng minh phương trình dao động nhanh quiver quanh vị trí 
+trung bình (X,Y) là:
+\begin{equation}
+    \epsilon_ x = \displaystyle \frac{qX}{2}\cos 2\tau \ \ \text{và} \ \
+    \epsilon _y = \displaystyle \frac{qY}{2}\cos 2\tau.
+\end{equation}
+
+\item Viết phương trình chuyển động toàn phần của hạt trong bẫy Paul, biết ban đầu hạt đứng yên tại \((x_0,y_0)\).
+
+\item Biết chuyển động drift coi như do chịu tác dụng của lực Ponderomotive. Xác định thế năng do lực này tác dụng lên ion theo tọa độ trung bình \((X,Y)\) của hạt. Nhận xét về tính cân bằng của bẫy.
+    \end{enumerate}
+    
+\end{enumerate}

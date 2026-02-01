@@ -1,0 +1,96 @@
+Phun điện (Electrospray) là hiện tượng các hạt mang điện được phóng ra từ chất lỏng phân cực hoặc dẫn điện dưới tác dụng của điện trường đủ mạnh. Thí nghiệm đầu tiên về phun điện được thực hiện vào thế kỷ 18, khi Jean-Antoine Nollet nhận thấy nước bị phun sương (tạo thành sương mù) khi chảy ra từ một bình chứa được nối với nguồn điện áp cao.
+
+Một mao quản được chứa đầy chất lỏng dẫn điện. Khi một điện trường được áp vào đầu nơi bề mặt chất lỏng tiếp xúc với không khí, bán kính độ cong của bề mặt chất lỏng sẽ giảm xuống.
+
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.4\linewidth]{Problem_3/Figs_P3/Fig1_B3.pdf}
+        \caption{Mao quản đặt giữa hai cực của một nguồn điện}
+        \label{fig:Electrospray}
+    \end{figure}
+
+\begin{enumerate}
+    \item Nếu cường độ điện trường áp vào vẫn chưa đủ mạnh để làm cho chất lỏng phun ra thành các hạt mang điện, hãy ước tính mối quan hệ giữa bán kính cong của bề mặt chất lỏng $R_c$ và cường độ điện trường $E$ phía trên bề mặt. Giả sử hệ số sức căng bề mặt của chất lỏng là $\sigma$.
+\end{enumerate}
+Bây giờ ta sẽ tìm hiểu mối liên hệ giữa điện áp ngoài khi chất lỏng bắt đầu phun ra các hạt mang điện $V_{\text{start}}$ và bán kính cong $R_c$. Trên một tấm phẳng nối đất vô hạn, đặt mao quản sao cho đầu chất lỏng hướng về tấm. Thành ngoài của mao quản được duy trì ở điện áp không đổi $V$. Khoảng cách giữa đỉnh của mặt chất lỏng và tấm phẳng nối đất là $d$.
+
+Để thuận tiện cho việc tính toán, ta xem phần ngoài của mao quản và bề mặt chất lỏng như một \textbf{mặt đôi cực đối xứng trụ} (hyperboloid có trục đối xứng), và mặt này mang một điện thế không đổi \( V \), như được minh họa ở hình bên phải. Hai tiêu điểm của mặt đôi cực này là \( \mathrm{F}\left(0;0;\dfrac{a}{2}\right) \) và \( \mathrm{F}'\left(0;0;-\dfrac{a}{2}\right) \). (Giá trị của $a$ là chưa biết).
+\vspace{2mm}
+
+Giả sử một điểm \( \mathrm{P} \) trong không gian có khoảng cách đến tiêu điểm \( \mathrm{F} \) là \( r_2 \), và đến tiêu điểm \( \mathrm{F}' \) là \( r_1 \). Khi đó, phân bố điện thế trong không gian hiển nhiên có thể được biểu diễn dưới dạng hàm của \( r_1 \) và \( r_2 \) là
+$
+\phi(r_1, r_2)
+$.
+Ta đặt các tọa độ mới như sau:
+\begin{equation}
+\notag
+\begin{aligned}
+\eta = \frac{r_1 - r_2}{a} \quad \text{và} \quad
+\zeta = \frac{r_1 + r_2}{a}
+\end{aligned}
+\end{equation}
+trong đó:
+\begin{equation}
+\notag
+r_1=\sqrt{x^2+y^2+\left(z+\frac{a}{2}\right)^2} \quad \text { và } \quad r_2=\sqrt{x^2+y^2+\left(z-\frac{a}{2}\right)^2}
+\end{equation}
+Khi đó phân bố điện thế có thể được viết lại thành một hàm của \( \eta \) và \( \zeta \) là $\phi(\eta, \zeta)$.
+Với cách biểu diễn theo hệ tọa độ mới này, mặt chứa phần ngoài của mao quản và bề mặt chất lỏng có thể được biểu diễn bởi $\eta = \eta_0$. Các mặt $\eta=\text{const}$ là những hyperbolic đồng tiêu (có chung cặp tiêu điểm $\mathrm{F}$, $\mathrm{F^{\prime}}$). Tương tự, các mặt $\xi=\text{const}$ cũng là những ellipsoid đồng tiêu.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=1\linewidth]{Problem_3/Figs_P3/Fig2_B3.pdf}
+    \caption{}
+    \label{fig:Electrospray_2}
+\end{figure}
+
+\begin{enumerate}
+    \item[2.] Hãy lập luận để chỉ ra rằng điện thế $\phi$ sẽ chỉ phụ thuộc độc lập vào $\eta$ (tức không phụ thuộc vào $\zeta$).
+\end{enumerate}
+Sau khi tính toán, người ta nhận thấy rằng hàm điện thế $\phi$ sẽ tuân theo phương trình:
+\begin{equation}
+\tag{i}
+\frac{\partial}{\partial \eta}\left[\left(1-\eta^2\right) \frac{\partial \phi}{\partial \eta}\right]=0.
+\label{i}
+\end{equation}
+\begin{enumerate}
+    \item[3.] Từ phương trình (\ref{i}) và các điều kiện biên, hãy tìm hàm điện thế $\phi (\eta)$. Biểu diễn câu trả lời theo $\eta$, $\eta_0$ và $V$.
+\end{enumerate}
+Biết rằng bán kính cong của các mặt hyperbolic trong không gian phụ thuộc vào công thức sau:
+\begin{equation}
+\tag{ii}
+\rho=a \frac{1-\eta^2}{2 \eta}\left[1+4 \frac{(x^2+y^2) / a^2}{\left(1-\eta^2\right)^2}\right].
+\label{ii}
+\end{equation}
+\begin{enumerate}
+    \item[4.] Chứng minh rằng với $R_c \ll d$, điện trường tại đỉnh của bề mặt chất lỏng là:
+    \begin{equation}
+    \tag{iii}
+    E_{t i p}=-\frac{2 V / R_c}{\ln \left(4 d / R_c\right)}.
+    \label{iii}
+    \end{equation}
+    Từ đó hãy tính giá trị của $V_{\text{start}}$ theo $R_c, d, \sigma$, và các hằng số vật lý liên quan. 
+    
+\end{enumerate}
+
+
+
+
+Khi điện áp \( V \) được tăng lên đủ lớn, bán kính cong \( R_c \) tại đỉnh của bề mặt chất lỏng sẽ tiến dần về 0. Khi đó, bề mặt chất lỏng sẽ hình thành một hình nón, gọi là \textbf{nón Taylor} (\textit{Taylor cone}).
+Góc đỉnh của nón Taylor được ký hiệu là \( \theta_T \).
+Tại đỉnh của hình nón, hệ thống rơi vào trạng thái không ổn định, và các hạt mang điện sẽ bị phóng ra khỏi đỉnh theo hướng ra ngoài.
+Tuy nhiên, ngoại trừ vùng đỉnh, bề mặt bên của nón vẫn duy trì trạng thái cân bằng giữa sức căng bề mặt và áp suất tĩnh điện.
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Problem_3/Figs_P3/Fig3_B3.pdf}
+    \caption{}
+    \label{fig:Electrospray_3}
+\end{figure}
+\begin{enumerate}
+    \item[5.] Tìm cường độ điện trường bề mặt $E_n$ như một hàm của khoảng cách $r$ từ đỉnh hình nón. Biểu diễn câu trả lời theo $\sigma, r$, và $\theta_T$.
+\end{enumerate}
+Cho công thức tích phân sau:
+\begin{equation}
+\notag
+\int \frac{\mathrm{d} x}{1-x^2}=\tanh^{-1}(x)+C
+\end{equation}

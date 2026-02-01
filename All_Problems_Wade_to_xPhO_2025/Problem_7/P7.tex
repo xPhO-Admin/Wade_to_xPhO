@@ -1,0 +1,90 @@
+\textbf{Chuyển pha Peierls trong vật liệu 1D}
+\vspace{2mm}
+
+Chuyển pha Peierls là chuyển pha giữa vật liệu dẫn diện và vật liệu cách điện. Khi ta đun nóng vật liệu, tính dẫn điện yếu dần và từ từ chuyển sang cách điện. Hiện này dễ quan sát đối với vật liệu 1D hơn các vật liệu khác. Một vật liệu 1D mà chúng ta biết là TTF-TCNQ, là vật liệu polymer (polymer chains).
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Problem_7/Figs_P7/VL1D.pdf}
+    \caption{Vật liệu 1 chiều}
+    \label{fig:VL1D}
+\end{figure}
+\vspace{2mm}
+
+\textbf{1. Mô hình dẫn điện Tight-binding}
+\vspace{2mm}
+
+Mô hình dẫn điện Tight-binding mô tả rằng các electron sẽ "nhảy" từ nguyên tử này sang nguyên tử lân cận. Vì thế nên các electron sẽ có các trạng thái hữu hạn và rời rạc. Xét một ô cơ sở gồm \(N\) nguyên tử, liên kết với nhau bằng liên kết cứng của mạng tinh thể.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=1\linewidth]{Problem_7/Figs_P7/LK cứng.pdf}
+    \caption{Mô hình Tight-binding}
+    \label{fig:tight-binding}
+\end{figure}
+
+Từ phương trình Schrodinger, người ta rút ra được phương trình để mô tả hàm sóng electron tại nguyên tử thứ \(n\)
+\begin{equation}
+    E_0 \psi_n - t(\psi_{n+1} + \psi_{n-1}) = E_1 \psi_n.
+\end{equation}
+Với: \(E_0\), \(t\) là các hằng số. 
+
+\begin{enumerate}[label = \alph*.]
+    \item Người ta giả sử rằng, hàm sóng sẽ phụ thuộc vào số sóng \(k\) theo biểu thức
+    \begin{equation}
+        \psi_n =A e^{ i k n a}.
+    \end{equation}
+    Tìm hàm năng lượng \(E_1(k)\) phụ thuộc vào \(E_0, k, t\).
+    \item Để loại trừ điều kiện biên, ta giả sử hệ \(N\) hạt tuần hoàn. Tìm điều kiện của \(k\) để hệ tuần hoàn.
+    \vspace{2mm}
+
+    Trong bài toán này, ta gọi vùng Brillouin thứ nhất, trong không gian \((E,k)\). Là vùng trên trục \(Ok\) mà chứa những giá trị \(k \in (-k_1,k_1)\) khả dĩ của electron. Tìm vùng Brillouin thứ nhất. 
+    \item Giả sử trong mô hình có \(N\) electron di chuyển; không có trường ngoài tác dụng lên hệ. Dựa vào nguyên lý Pauli về electron và nguyên lý cực tiểu năng lượng. Biểu diễn phổ năng lượng của \(N\) electron trên đồ thị \((E,k)\). 
+    \item Ta thấy rằng \(k\) nhận giá trị âm và dương. Với \(k>0\) ta biểu diễn các electron đi theo chiều dương; Với \(k<0\) ta biểu diễn các electron đi theo chiều dương. Vẽ phổ năng lượng của electron trong các trường hợp:
+    \begin{enumerate}[label = (\arabic*)]
+        \item Có \(N\) electron, đang có dòng đi về phía chiều dương.
+        \item Có \(N\) electron, đang có dòng đi về phía chiều âm.
+        \item Có \(2N\) electron.
+    \end{enumerate}
+    Với trường hợp (3), liệu có dòng điện tồn tại? Trong 3 trường hợp trên, phân loại thành kim loại và vật cách điện.
+
+
+\end{enumerate}
+
+\textbf{2. Chuyển pha Peierls}
+\vspace{2mm}
+
+Xét một mạng tinh thể 1D. Liên kết giữa các nguyên tử thay vì là liên kết cứng của mạng tinh thể, bây giờ liên kết giữa chúng là một lò xo đủ cứng. Biết rằng có \(N\) nguyên tử và \(N\) electron di chuyển trong hệ.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=1\linewidth]{Problem_7/Figs_P7/LK mềm.pdf}
+    \caption{Cấu trúc mạng tinh thể bị phá vỡ}
+    \label{fig:LK mềm}
+\end{figure}
+Trong bài toán này, ta coi như hệ chịu một ngoại lực khiến nó bị dao động với mode như hình. Hai hạt liền kề sẽ có xu hướng tiến sát lại với nhau. 
+
+
+\begin{enumerate}[label = \alph*.]
+    \item Coi như khi hai nguyên tử tiến rất gần với nhau, chúng xem như một nguyên tử duy nhất. Tìm vùng Brillouin thứ nhất lúc này. Từ đây suy ra rằng có sự chuyển pha giữa kim loại và vật liệu cách điện.
+    \item Ta cho rằng, tại điểm biên của vùng Brillouin thứ nhất và thứ hai bị chênh lệch một khoảng năng lượng \(\Delta\). Hiện tượng này chỉ diễn ra khi có ngoại lực tác dụng lên mạng tinh thể. 
+    \vspace{0mm}
+    
+    Hàm sóng tại biên (\(k=k_b\)) là tổ hợp của hàm sóng của vùng Brillouin thứ nhất và vùng Brillouin thứ hai. 
+    \begin{equation}
+        | \psi \rangle = a| \psi_1 \rangle + b| \psi_2 \rangle
+    \end{equation}
+    Phương trình đặc trưng rút ra từ phương trình Schrodinger có dạng. Với \(E_2\) là trị riêng. 
+    \begin{equation}
+        \left[E_1(k) - E_2 \right] \left[E_1(-k) - E_2 \right] - \frac{\Delta^2}{4} = 0.
+    \end{equation}
+    Tìm phổ năng lượng mới trong vùng Brillouin thứ nhất. Tính sự biến thiên năng lượng của các electron. Để dễ tính toán ta có thể dùng xấp xỉ sau, với \(\alpha=E_1(k_b)\), \(\beta=\partial E_1(k_b)/\partial k\).
+    \begin{equation}
+        E_1(k) \simeq \alpha + \beta \left( k -\frac{\pi}{2a}\right).
+    \end{equation}
+
+    \textit{*Phương trình Schrodinger có dạng: \(H|\psi \rangle = E |\psi \rangle\).}
+\end{enumerate}
+
+
+

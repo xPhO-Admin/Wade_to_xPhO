@@ -1,0 +1,105 @@
+\textbf{1.} Hệ số mảng:
+\begin{equation}
+    \textbf{AF}(\theta) =  \sum_{n=0}^{N-1} \exp \left( i n k d \sin \theta \right) =\dfrac{1 - \exp \left( i N k d \sin \theta \right)}{1 - \exp \left( i k d \sin \theta \right)} = \exp \left[ \dfrac{i (N-1) k d \sin \theta }{2} \right] \dfrac{\sin \left( \dfrac{N k d\sin \theta}{2} \right)}{\sin \left( \dfrac{k d\sin \theta}{2} \right)}.
+\end{equation}
+
+\textbf{2.}
+
+\textbf{a.}
+\begin{equation}
+\begin{split}
+    \textbf{AF}(\theta) &= \sum_{n=0}^{N-1} C_{N-1}^n \exp \left( i n k d \sin \theta \right) = \left[ 1 + \exp \left( i k d \sin \theta \right) \right]^{N-1} \\
+    &= 2^{N-1} \exp \left( \dfrac{ i k d \sin \theta }{2} \right) \cos^{N-1} \left( \dfrac{ k d \sin \theta }{2} \right).
+\end{split}
+\end{equation}
+
+\textbf{b.}
+
+Với cực đại ứng với \(\theta=0\), Độ rộng búp sóng \(\text{HPBW}\) thỏa mãn
+\begin{equation}
+    \cos^{N-1} \left[ \dfrac{\pi}{2} \sin \left( \dfrac{\text{HPBW}}{2} \right) \right] = \dfrac{1}{\sqrt{2}} \Rightarrow N = 1 + \log_{\cos \left[ \dfrac{\pi}{2} \sin \left( \dfrac{\text{HPBW}}{2} \right) \right]} \left( \dfrac{1}{\sqrt{2}} \right) = 5.07
+\end{equation}
+Vậy, cần ít nhất \(N=6\) phần tử để được \(\text{HPBW} < 30^\circ\), cụ thể với \(N=6\) thì \(\text{HPBW} = 27^\circ\).
+
+Với \(N\) lớn để xấp xỉ \( 2^{-1/[2(N-1)]} \approx 1 - \dfrac{\ln (2)}{2 (N-1)}\) thì
+\begin{equation}
+    \text{HPBW} = \dfrac{1.06}{\sqrt{N-1}}.
+\end{equation}
+Đây là một công thức cho ta dễ ước lượng góc mở của búp sóng hơn.
+
+\textbf{3.}
+
+\textbf{a.} 
+
+Ta chứng minh với \(z<1\), trường hợp \(z>1\), bằng các biến đổi với số phức, ta cũng sẽ thu được kết quả tương tự
+\begin{equation}
+\begin{split}
+    T_{m+1} (z) + T_{m-1} (z) &= \cos \left[ \left( m + 1 \right) \cos^{-1} \left( z \right) \right] + \cos \left[ \left( m - 1 \right) \cos^{-1} \left( z \right) \right] \\
+    &= \left\{ \cos \left[ m \cos^{-1} \left( z \right) \right] \cos \left[ \cos^{-1} \left( z \right) \right] - \sin \left[ m \cos^{-1} \left( z \right) \right] \sin \left[ \cos^{-1} \left( z \right) \right] \right\} \\
+    &+ \left\{ \cos \left[ m \cos^{-1} \left( z \right) \right] \cos \left[ \cos^{-1} \left( z \right) \right] + \sin \left[ m \cos^{-1} \left( z \right) \right] \sin \left[ \cos^{-1} \left( z \right) \right] \right\} \\
+    &= 2 z \cos \left[ m \cos^{-1} \left( z \right) \right] \\
+    &= 2 z T_{m} (z).
+\end{split}
+\end{equation}
+hay viết lại theo cách khác, thay \(m\) thành \(m-1\), ta thu được dãy Tchebyscheff
+\begin{equation}
+    T_{m} (z) = 2 z T_{m-1} (z) + T_{m-2} (z).
+\end{equation}
+
+\textbf{b.} Với \(T_0 = 1\) và \(T_1 = z\), ta dựa vào chuỗi truy hồi để tìm được đa thức Tchebyshev
+
+\begin{align*}
+    T_0 (z) &= 1, \\
+    T_1 (z) &= z, \\
+    T_2 (z) &= 2 z^2 - 1, \\
+    T_3 (z) &= 4 z^3 - 3 z, \\
+    T_4 (z) &= 8 z^4 - 8 z^2 + 1, \\
+    T_5 (z) &= 16 z^5 - 20 z^3 + 5 z, \\
+    T_6 (z) &= 32 z^6 - 48 z^4 + 18 z^2 - 1, \\
+    T_7 (z) &= 64 z^7 - 112 z^5 + 56 z^3 - 7 z, \\
+    T_8 (z) &= 128 z^8 - 256 z^6 + 160 z^4 - 32 z^2 + 1, \\
+    T_9 (z) &= 256 z^9 - 576 z^7 + 432 z^5 - 120 z^3 + 9 z.
+\end{align*}
+
+Đặt \( z = \cos \left( \dfrac{ k d \sin \theta}{2} \right)\), ta được
+
+\begin{equation}
+    \textbf{AF} (z) = 64 z^7 - 112 z^5 + 56 z^3 - 7 z
+\end{equation}
+
+Mặt khác, đối với hệ nguồn phát sóng, ta tính được hệ số mảng:
+\begin{equation}
+\begin{split}
+    \textbf{AF} (z) &= \sum_{j=1}^4 2 a_i \cos \left[ (4.5-i) kd \sin \left( \theta \right) \right] \\
+    &= \sum_{j=1}^4 2 a_i \cos \left[ \left( 9 - 2i \right) \cos^{-1} \left( z \right) \right] \\
+    &= 2 a_1 T_7 (z) + 2 a_2 T_5 (z) + 2 a_3 T_3 (z) + 2 a_4 T_1 (z) \\
+    &= \left( 128 a_1 \right) z^7 + \left( -224 a_1 + 32 a_2 \right) z^5 + \left( 112 a_1 - 40 a_2 + 8 a_3 \right) z^3 + \left( -14 a_1 + 10 a_2 - 6 a_3 + 2 a_4 \right) z.
+\end{split}
+\end{equation}
+
+Đồng nhất các hệ số, ta tìm được bộ giá trị \(a_1\), \(a_2\), \(a_3\), \(a_4\) là nghiệm của hệ phương trình
+\begin{equation}
+\begin{split}
+    64 &= 128 a_1, \\
+    -122 &= -224 a_1 + 32 a_2, \\
+    56 &= 112 a_1 - 40 a_2 + 8 a_3, \\
+    -7 &= -14 a_1 + 10 a_2 - 6 a_3 + 2 a_4.
+\end{split}
+\end{equation}
+hay 
+\begin{equation}
+\begin{split}
+    a_1 &= 0.5, \\
+    a_2 &= 0, \\
+    a_3 &= 0, \\
+    a_4 &= 0.
+\end{split}
+\end{equation}
+
+Giống như mảng nhị thức, với càng nhiều phẩn tử, mảng Tchebyshev mang đến búp sóng càng hẹp, sự hội tụ càng lớn!
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{Balanis} Balanis, Constantine A. \textit{Antenna theory: analysis and design}. John wiley \& sons, 2016.
+\end{thebibliography}

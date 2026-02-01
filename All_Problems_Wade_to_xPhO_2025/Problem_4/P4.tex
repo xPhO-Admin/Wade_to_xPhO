@@ -1,0 +1,68 @@
+
+
+
+\textbf{Phần 1. Tính chất cơ bản của phản xạ toàn phần} \vspace{2mm}
+
+Điện trường của một sóng điện từ phẳng đơn sắc phân cực thông thường trong không gian có thể viết dưới dạng phức như sau:
+\begin{equation}
+\tag{*}
+E(\mathbf{r},t)=E_0 \exp \left[{i(\omega t- \mathbf{k}.\mathbf{r}} + \varphi_0) \right]=\Tilde{E_0} \exp \left[{i(\omega t- \mathbf{k}.\mathbf{r}}) \right].
+\end{equation}
+Trong đó $E_0$ là biên độ điện trường, $\mathbf{k}$ là vectơ sóng, và $\omega$ là tần số góc. Xét một sóng điện từ phẳng đơn sắc kiểu TE có tần số $\omega$ lan truyền trong môi trường chiết suất $n_1$ và tới mặt phân cách với một môi trường khác có chiết suất $n_2$. Sóng tới tạo với pháp tuyến của mặt phân cách góc $\theta_I$, còn sóng khúc xạ có góc $\theta_T$. Giả thiết mọi môi trường đều không từ tính ($\mu=1$). Từ đây trở đi, các kí hiệu $I$, $R$, $T$ lần lượt chỉ các đại lượng của sóng tới, sóng khúc xạ và sóng phản xạ. Đặt hệ trục tọa độ như hình dưới. Giả sử vector sóng của sóng phẳng này trong chân không là $k=\dfrac{2 \pi}{\lambda}$, với $\lambda$ là bước sóng trong chân không.
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Problem_4/Figs_P4/PXTP.pdf}
+    \caption{Phản xạ toàn phần}
+    \label{fig:PXTP}
+\end{figure}
+\begin{enumerate}
+    \item[\textbf{a.}] Biết rằng tại mặt phân cách không có điện tích tự do cũng như dòng điện. Dựa vào điều kiện biên giữa hai môi trường, hãy:
+    \begin{enumerate}
+        \item[\textbf{1.}] Chứng minh lại định luật khúc xạ.
+        \item[\textbf{2.}] Tìm hệ số phản xạ $\Gamma=\dfrac{\Tilde{E}_\text{0R}}{\Tilde{E}_\text{0I}}$, trong đó $\Tilde{E}_\text{0I}$, $\Tilde{E}_\text{0R}$ lần lượt là biên độ của điện trường tới và điện trường phản xạ. Biểu diễn câu trả lời của bạn theo $n_1$, $n_2$, $\theta_I$, $\theta_T$. 
+    \end{enumerate}
+   
+    \item[\textbf{b.}] Khi $n_1>n_2$, tồn tại một góc tới tới hạn $\theta_c$ sao cho nếu $\theta_I>\theta_c$ thì sóng tới sẽ bị phản xạ toàn phần (total internal reflection). Lúc này trong môi trường chiết suất $n_2$ vẫn có điện trường của sóng khúc xạ $E_{T}$ nhưng suy giảm rất nhanh theo độ sâu $z$, có thể viết dưới dạng:
+\begin{equation}
+E_T(\mathbf{r}, t)=E_{0T} \exp \left( {\alpha z}\right)  \exp \left[{i\left(\omega t-k_{T y} y\right)}\right] .
+\end{equation}
+Hãy tìm hệ số suy giảm $\alpha$. Biểu diễn câu trả lời theo $k, n_1, n_2$ và $\theta_1$. 
+
+\item[\textbf{c.}] Tìm độ lệch pha $\varphi$ giữa sóng tới và sóng phản xạ trong trường hợp $\theta_1>\theta_c$. Biểu diễn câu trả lời theo $n_1$, $n_2$ và $\theta_I$.
+\end{enumerate}
+
+\textbf{Phần 2. Dịch chuyển Goos–Hänchen} \vspace{2mm}
+
+Thực tế, chùm sáng tới thường không phải là sóng phẳng đơn sắc lý tưởng, mà là một chùm sáng có bề rộng phổ không gian nhất định. Nói cách khác, chùm sáng thực tế mặc dù hướng tới cùng một điểm tới, nhưng góc tới lại có một độ rộng góc $\Delta \theta_I$ nhất định. Bằng cách phân tích chùm sáng tới này thành một chuỗi các sóng phẳng đơn sắc, ta thấy rằng hướng của mỗi thành phần sóng phẳng đều hơi khác nhau. Do đó, trong quá trình phản xạ toàn phần, mỗi thành phần sóng phẳng sẽ sinh ra một pha phản xạ khác nhau so với các thành phần khác.
+\vspace{2mm}
+
+Khi tổng hợp các sóng phẳng phản xạ này lại, ta sẽ được chùm sáng phản xạ thực tế. Giữa vị trí cực đại cường độ của sóng phản xạ và sóng tới sẽ có một độ lệch ngang $D$, gọi là dịch chuyển Goos-Hänchen (Goos-Hänchen shift).
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Problem_4/Figs_P4/GH.pdf}
+    \caption{Dịch chuyển Goos–Hänchen}
+    \label{fig:GH}
+\end{figure}
+
+\begin{enumerate}
+    \item[\textbf{a.}] Hãy viết độ lệch pha $\phi(\theta_1, y)$ giữa sóng tới và sóng phản xạ lúc này, với $y$ độ dịch chuyển theo mặt phân cách của điểm phản xạ.
+    \item[\textbf{b.}] Giả sử ta có một tổng hợp giao thoa gồm nhiều sóng phẳng:
+    \begin{equation}
+    \notag
+        S=\int A(\theta) \exp \left[i \Phi(\theta, y)\right] \mathrm{d} \theta.
+    \end{equation}
+    Nguyên lí pha dừng phát biểu rằng vị trí của cực đại cường độ sóng tổng hợp xảy ra tại giá trị $\theta=\theta_I$ thỏa mãn điều kiện:
+    \begin{equation}
+    \notag
+        \left.\dfrac{\partial \Phi(\theta, y)}{\partial \theta}\right|_{\displaystyle \theta=\theta_I}=0.
+    \end{equation}
+    Hãy chứng minh rằng độ lệch ngang $D$ có dạng:
+    \begin{equation}
+        \notag
+        D=\dfrac{\lambda \sin \theta_I}{\pi \sqrt{n_1^2 \sin^2\theta_I-n_2^2}}.
+    \end{equation}
+\end{enumerate}
+
+
+

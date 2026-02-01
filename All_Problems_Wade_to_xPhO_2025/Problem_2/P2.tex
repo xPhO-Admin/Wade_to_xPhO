@@ -1,0 +1,69 @@
+
+\textbf{1. Định luật Richardson cho kim loại}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.6\linewidth]{Problem_2/Figs_P2/Kim loại_1.pdf}
+    \caption{(A) Hộp \(L \times L \times L\); (B) Không gian \((k_x,k_y)\); (C) Hệ tuần hoàn}
+    \label{fig:kim loại}
+\end{figure}
+
+
+\begin{enumerate}[label = \textbf{\roman*.}]
+    \item Cho \(\psi(\mathbf{k},\mathbf{r})\) là hàm sóng của một electron bị giam trong một hộp có thể tích \(V = L \times L \times L\). Ứng với một giá trị \(\mathbf{k}  = (k_x,k_y,k_z)\) là một \textit{state -  trạng thái} của electron đó. Vector \(\mathbf{r}\) có gốc là tâm của hình hộp. 
+    \begin{equation}
+        \psi(\mathbf{k}, \mathbf{r}) = \frac{1}{\sqrt{L^3}} e^{i \mathbf{k} . \mathbf{r}} .
+        \label{eq:P2_1}
+    \end{equation}
+    Ta lập được một không gian của vector \(\mathbf{k}\). Trong không gian \(\mathbf{k}\), những trạng thái (stated) được biểu diễn như những điểm có toạ độ \((k_x,k_y,k_z)\). Ở hình \ref{fig:kim loại}b ta mô tả cho trường hợp 2 chiều, ta thấy rằng các trạng thái là những điểm rời rạc. 
+    \begin{enumerate}[label = \textbf{\alph*)}]
+        \item Chứng minh điều kiện của \(\mathbf{k}\) để hệ vật lý là hệ tuần hoàn thoả các phương trình
+        \begin{equation}
+            k_x = \frac{2\pi n_x}{L}; \  k_y = \frac{2\pi n_y}{L}; \ k_x = \frac{2\pi n_x}{L}.
+        \end{equation}
+        Với \((n_x,n_y,n_z)\) là các số nguyên thuộc \(\mathds{Z}\). Hệ tuần hoàn có tính lặp lại theo chu kỳ. Khi đấy ta coi có nhiều hộp xếp kế bên nhau (Hình \ref{fig:kim loại}c). Ta gọi mỗi một hộp là một ô cơ sở.
+        \item Trong không gian \(\mathbf{k}\), khoảng cách giữa các điểm trạng thái liền kề nhau? Xét một thể tích \( \mathrm{d} V_{\mathbf{k}}\) theo toạ độ cầu, tìm vi phân \(\mathrm{d} N\) trạng thái mà \(\mathrm{d} V_{\mathbf{k}}\) bao lấy. Biết rằng \(\mathrm{d} N\) có thể viết dưới dạng sau, với \(g(E)\) được gọi là mật độ trạng thái. Tìm \(g(E)\).
+        \begin{equation}
+            \mathrm{d} N = g(E) \mathrm{d} E = g(k) \mathrm{d} k = g(v) \mathrm{d} v.
+        \end{equation}
+        
+        *Biết electron có spin up và spin down, nghĩa là ở cùng một mức năng lượng có thể tồn tại nhiều nhất 2 electron có spin ngược nhau.
+        
+        \item Tìm hàm mật độ trạng thái \(g(k), \ g(v)\) với các biến \(k\) và tốc độ \(v\).
+        \vspace{2mm}
+
+        \textit{*Công thức liên hệ giữa năng lượng \(E\) và \(k\) là \(\displaystyle E = \frac{\hbar^2 k^2}{2m}\).}
+    \end{enumerate}
+    \item Biết electron tuân theo phân bố Fermi-Dirac. Phân bố Fermi-Dirac là trung bình số hạt có năng lượng \(E\) trên tổng \(dN\) hạt.
+    \begin{equation}
+        f_{FD}(E) = \frac{1}{1 + \exp{\displaystyle \left[\frac{E - E_F}{kT} \right]}}.
+        \label{eq:P2_2}
+    \end{equation}
+    \begin{enumerate}[label = \textbf{\alph*)}]
+        \item Tìm mật độ số hạt  \(\mathrm{d}n(E) \ \big[\text{Hạt}/ L^3 \big]\) có năng lượng trong khoảng \(\Big[E, E + dE\Big]\).
+        \item Nếu electron có mức vận tốc đủ lớn để thoát khỏi thế năng giam cầm \(U\) thì sẽ tạo một mật độ dòng \(j_x\) theo phương \(Ox\), tính mật độ \(j_x\). Biết rằng, để electron thoát khỏi kim loại thì \(E \gg E_F\). 
+    \end{enumerate}
+\end{enumerate}
+\textbf{2. Graphene single-layer}
+\vspace{2mm}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Problem_2/Figs_P2/Graphene.pdf}
+    \caption{(A) GSL; (B) electron trong GSL.}
+    \label{fig:graphene}
+\end{figure}
+\newpage
+Vật liệu Graphene single-layer (GSL) là một vật liệu 2D (kích thước \(L \times L\)), các electron chủ yếu chuyển động song song với bề mặt của GSL. Một tính chất đặc biệt của GSL là electron chuyển động song song sẽ di chuyển với vận tốc đều \(\mathbf{v_F}\). Và năng lượng cho chuyển động song song của chúng là
+\begin{equation}
+    E_p = \hbar v_F |\mathbf{k}|. 
+\end{equation}
+Ở phương vuông góc, GSL coi như vẫn có một độ dày. Electron di chuyển theo phương vuông góc sẽ coi như bị nhốt trong hố thế, với độ cao bằng với thế năng thoát của GSL. 
+\begin{enumerate}[label = \textbf{\roman*.}]
+    \item Tìm mật độ trạng thái \(g(E_p)\) của các electron có mức năng lượng trong khoảng \(\Big[E_p, E_p + \mathrm{d} E_p \Big]\).
+    \item Từ liên hệ \(E_p + E_x = E\), tìm mật độ hạt \(\mathrm{d} n(E_x)\) của các electron có mức năng lượng trong khoảng \(\Big[E_x, E_x + \mathrm{d} E_x \Big]\). Từ đó tính ra được mật độ dòng \(j_x\).
+    \vspace{2mm}
+
+    \textit{*Gợi ý: Tính mật độ hạt \(\mathrm{d} n(E_p, E_x)\) cho các các hạt có đồng thời hai mức năng lượng trong khoảng \(\Big[E_p, E_p + \mathrm{d}E_p \Big]\) và \(\Big[E_x, E_x + \mathrm{d} E_x \Big]\) trước.}
+\end{enumerate}
+
+

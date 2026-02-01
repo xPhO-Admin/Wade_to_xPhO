@@ -1,0 +1,262 @@
+%% Road to VPhO 2023 Template
+
+\documentclass[12pt]{article}
+% \usepackage[english]{babel}
+\usepackage[utf8]{vietnam}
+\usepackage[T5]{fontenc}
+\usepackage[top=2cm, bottom=2cm, left=2cm,right=2cm]{geometry}
+%% Margin %%
+
+%%%%%%%%%% Figure %%%%%%%%%%%%%
+\usepackage[pdftex]{graphicx}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{wrapfig}
+\usepackage{tcolorbox}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{eqnarray}
+\usepackage{siunitx}
+\usepackage{array, lipsum, bibentry,fancyhdr}
+\usepackage{hyperref}
+\usepackage{natbib}
+\setlength{\parindent}{0pt}
+\usepackage{enumitem}
+\usepackage[noframe]{showframe}
+\usepackage{framed}
+\usepackage{titling}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{authblk}
+\usepackage{sectsty}
+\let\underbar\relax
+\usepackage{eqparbox}
+\usepackage{dsfont}
+
+%%%%%%%%%% Pictures drawing %%%%%%%%%%%%%
+
+\usepackage{pgfplots} %%%%%% Regression %%%%
+\pgfplotsset{compat = newest}
+\usepackage{pgfplotstable}
+\usepackage{tikz}
+\usepackage{tikz-3dplot} %%%%%% Draw %%%%%%
+\usepackage{tikz,tkz-euclide}
+\usetikzlibrary{arrows,calc,patterns}
+\usetikzlibrary{quotes,angles}
+\usetikzlibrary{shapes.geometric}
+\usepackage{circuitikz} %%%%% Circuit %%%%
+\usetikzlibrary{decorations.pathmorphing,patterns}
+
+\setlength{\unitlength}{1cm}
+
+%%%%%%%%%% Hyperlink %%%%%%%%%%%%%
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=mangeta,      
+	urlcolor=blue,
+	pdftitle={Overleaf Example},
+	pdfpagemode=FullScreen,
+}
+
+%%%%%%%%%% Header & Footer %%%%%%%%%%%%%
+
+\setlength{\headheight}{10mm}
+\RequirePackage{fancyhdr}  % Needed to define custom headers/footers
+\RequirePackage{lastpage}  % Number of pages in the document
+\pagestyle{fancy}          % Enables the custom headers/footers
+% Headers
+\lhead{\includegraphics[width=.8in]{xPhO.png}}%
+\chead{}%
+\rhead{\small\sffamily\bfseries{Lời giải lội tới xPhO 2025} --- \thepage/\pageref{LastPage}}
+% Footers
+\lfoot{}%
+\cfoot{}%
+\rfoot{}%
+\renewcommand{\headrulewidth}{1pt}% % header rule
+\renewcommand{\footrulewidth}{1pt}% % footer rule
+
+% \pagestyle{fancy}
+% 	\fancyhead[L]{\empty}
+% 	\fancyhead[R]{\empty}
+% 	\fancyhead[C]{\empty}
+% 	\fancyfoot[C]{\empty}
+% 	\fancyfoot[L]{\empty}
+% 	\renewcommand{\headrulewidth}{0pt}
+% 	\fancyfoot[C]{\normalcolor{\thepage/\pageref{LastPage}}}
+% 	\setcounter{page}{1}
+
+%%%%%%%%%% Color setup %%%%%%%%%%%%%
+
+\RequirePackage{xcolor}
+\definecolor{wsdred}{HTML}{8E1728}
+\definecolor{wsdgrey}{HTML}{75787B}
+\renewcommand{\normalcolor}{\color{wsdred}}
+\colorlet{ColorOr}{white}
+
+\begin{document}
+
+%% Title %%
+{\fontsize{50}{24}\fontfamily{phv}\fontseries{b}
+\LARGE \normalcolor{ \textbf{Lời giải lội tới xPhO 2025} } }
+
+\textcolor{blue}{\textbf{\textit{Câu lạc bộ vật lý xPhO}}}
+
+%%%%
+\vspace{5mm}
+
+{\normalcolor\textbf{CÂU 1.}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_1/P1}
+\setcounter{equation}{0}
+\begin{center}
+    \normalcolor{\textbf{Bài giải}}
+\end{center}
+\input{Problem_1/S1}
+\begin{flushright}
+    (Biên soạn bởi Log).
+\end{flushright}
+\newpage
+{\normalcolor \textbf{CÂU 2.}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_2/P2}
+\setcounter{equation}{0}
+\begin{center}
+    \normalcolor{\textbf{Bài giải}}
+\end{center}
+\input{Problem_2/S2}
+\begin{flushright}
+    (Biên soạn bởi Mino và Log).
+\end{flushright}
+\newpage
+{\normalcolor \textbf{CÂU 3.}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_3/P3}
+\setcounter{equation}{0}
+\begin{center}
+    \normalcolor{\textbf{Bài giải}}
+\end{center}
+\input{Problem_3/S3}
+\begin{flushright}
+    (Biên soạn bởi Lê Minh Hưng).
+\end{flushright}
+\newpage
+{\normalcolor \textbf{CÂU 4.}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_4/P4}
+\setcounter{equation}{0}
+\begin{center}
+    \normalcolor{\textbf{Bài giải}}
+\end{center}
+\input{Problem_4/S4}
+\begin{flushright}
+    (Biên soạn bởi Lê Minh Hưng, Mino và Log).
+\end{flushright}
+\newpage
+{\normalcolor \textbf{CÂU 5.}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_5/P5}
+\setcounter{equation}{0}
+\begin{center}
+    \normalcolor{\textbf{Bài giải}}
+\end{center}
+\input{Problem_5/S5}
+\begin{flushright}
+    (Biên soạn bởi LGHi và Log).
+\end{flushright}
+\newpage
+{\normalcolor \textbf{CÂU 6.}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_6/P6}
+\setcounter{equation}{0}
+\begin{center}
+    \normalcolor{\textbf{Bài giải}}
+\end{center}
+\input{Problem_6/S6}
+\begin{flushright}
+    (Biên soạn bởi Lê Minh Hưng và Log).
+\end{flushright}
+\newpage
+{\normalcolor \textbf{CÂU 7.}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_7/P7}
+\setcounter{equation}{0}
+\begin{center}
+    \normalcolor{\textbf{Bài giải}}
+\end{center}
+\input{Problem_7/S7}
+\begin{flushright}
+    (Biên soạn bởi Mino).
+\end{flushright}
+\newpage
+{\normalcolor \textbf{CÂU 8.}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_8/P8}
+\setcounter{equation}{0}
+\begin{center}
+    \normalcolor{\textbf{Bài giải}}
+\end{center}
+\input{Problem_8/S8}
+\begin{flushright}
+    (Biên soạn bởi LGHi).
+\end{flushright}
+\newpage
+{\normalcolor \textbf{CÂU 9.}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_9/P9}
+\setcounter{equation}{0}
+\begin{center}
+    \normalcolor{\textbf{Bài giải}}
+\end{center}
+\input{Problem_9/S9}
+\begin{flushright}
+    (Biên soạn bởi Log).
+\end{flushright}
+\newpage
+{\normalcolor \textbf{CÂU 10.}}\vspace{1.5mm}
+
+\setcounter{equation}{0}
+\input{Problem_10/P10}
+\setcounter{equation}{0}
+\begin{center}
+    \normalcolor{\textbf{Bài giải}}
+\end{center}
+\input{Problem_10/S10}
+\begin{flushright}
+    (Biên soạn bởi Log).
+\end{flushright}
+
+% \begin{center}
+%     \normalcolor{------------------------------------------------ HẾT ------------------------------------------------}
+% \end{center}
+
+\newpage
+{\fontsize{30}{24}\fontfamily{phv}\fontseries{b}
+\LARGE \normalcolor{ \textbf{Danh sách các thành viên} } }
+\vspace{5mm}
+
+Các thành viên tham gia ra đề, biên soạn, làm đáp án
+\begin{enumerate}
+    \item Log (trưởng nhóm).
+    \item Mino.
+    \item LGHi (Hồ Đức Huy).
+    \item Lê Minh Hưng.
+\end{enumerate}
+
+Xin cảm ơn các sự hỗ trợ từ anh Nguyễn Văn Duy (Physium) trong các công việc.
+\end{document}

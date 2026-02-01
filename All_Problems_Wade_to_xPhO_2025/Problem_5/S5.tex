@@ -1,0 +1,352 @@
+\textbf{1. Khí electron ở trạng thái suy biến hoàn toàn}
+
+\textbf{1.a)}
+Khi khí electron bị suy biến hoàn toàn, ta coi \(T \xrightarrow{} 0\), khi đó:
+
+\begin{equation*}
+    \exp\!\left[\dfrac{E - \mu}{k_B T}\right] =
+    \left\{
+    \begin{array}{cc}
+        \infty&\left(E>\mu\right)\\
+        0&\left(E<\mu\right)\\
+    \end{array}
+    \right.
+\end{equation*}
+
+Như vậy, ta có số lượng hạt khí Fermion trung bình có trạng thái năng lượng E ở trạng thái suy biến là:
+
+\begin{equation}
+    \bar{n}(E) = \frac{1}{1+ \exp\!\left[\dfrac{E - \mu}{k_B T}\right] }=
+    \left\{
+    \begin{array}{cc}
+        0 & \left(E>\mu\right) \\
+        1 & \left(E<\mu\right) \\
+    \end{array}
+    \right.
+    \label{eq:s5_1}
+\end{equation}
+
+Suy ra  số lượng hạt khí Fermion trung bình có trạng thái động lượng p:
+\begin{equation}
+    \bar{n}(p) =
+    \left\{
+    \begin{array}{cc}
+        0 & \left(p>p_F\right) \\
+        1 & \left(p<p_F\right) \\
+    \end{array}
+    \right.
+    \label{eq:s5_2}
+\end{equation}
+
+\textbf{1.b)}
+
+Số trạng thái có động lượng từ  \(p  \xrightarrow{}  p+\mathrm{d}p\)  là:
+\begin{equation}
+    \mathrm{d}N_p=\rho(p)\mathrm{d}p=g\displaystyle\frac{V}{2\pi^2\hbar^3}p^2\mathrm{d}p.
+    \label{eq:s5_3}
+\end{equation}
+
+Ở các trạng thái đã được xác định ở trên, mỗi trạng thái có số lượng hạt trung bình là \(\bar{n}(p)\). Suy ra tổng số hạt có động lượng từ  \(p  \xrightarrow{}  p +\mathrm{d}p\) là
+
+\begin{equation}
+\mathrm{d}N=\mathrm{d}N_p\bar{n}(p)=
+ \left\{
+ \begin{array}{cc}
+     g\displaystyle\frac{V}{2\pi^2\hbar^3}p^2\text{d}p & \left(p<p_F\right) \\ \\
+     0 & \left(p>p_F\right)\\
+ \end{array}
+ \right.
+ \label{eq:s5_4}
+\end{equation}
+
+Ta tính tổng số hạt bằng cách lấy tích phân trên toàn miền động lượng
+\begin{equation}
+    \begin{split}
+        N&=\int_0^{\infty} g\displaystyle\frac{V}{2\pi^2\hbar^3}p^2\mathrm{d}p \\ 
+        &=\int_0^{p_F} g\displaystyle\frac{V}{2\pi^2\hbar^3}p^2\mathrm{d}p \\
+        &= \frac{V}{3\pi^2\hbar^3}p_F^3
+    \end{split}
+    \label{eq:s5_5}
+\end{equation}
+Suy ra \(p_F= (3\pi^2\hbar^3n_e)^{1/3}\) với \(n_e\) là mật độ hạt electron.
+
+\textbf{1.c)}
+
+Xét một mặt diện tích \(\mathrm{d}S\) ảo có véc tơ pháp tuyến \(\mathbf{n}\) và một hướng \textbf{s} bất kỳ hợp với \textbf{n} một góc \(\theta\).
+
+Trong thời gian \(\mathrm{d}t\), những hạt electron có động lượng \(p \xrightarrow{} p+\mathrm{d}p\) cách phần tử diện tích đoạn \(v(p)\mathrm{d}t\) và di chuyển theo hướng \textbf{s} là những hạt đi qua được phần tử diện tích. Tổng thông lượng động lượng số hạt này qua phần tử diện tích \(\mathrm{d}S\) là: 
+\begin{equation}
+\begin{split}
+    \mathrm{d}\phi&=\left[\left(v(p)\mathrm{d}t\mathrm{d}S_\perp\right)n_{(p\rightarrow{}p+\mathrm{d}p)}\frac{\mathrm{d}\Omega_s} {4\pi}\right]\mathbf{p}.\mathbf{n} \\
+    &=\left[\left(v(p)\mathrm{d}t\mathrm{d}S\cos{\theta}\right)n_{(p\rightarrow{}p+\mathrm{d}p)}\frac{\mathrm{d}\Omega_s}{4\pi}\right]p\cos{\theta}
+\end{split}
+\label{eq:s5_6}
+\end{equation}
+
+Với \(n_{\displaystyle(p\xrightarrow{}p+dp)}=\mathrm{d}N/V=\frac{\displaystyle p^2 \mathrm{d}p}{\displaystyle\pi^2 \hbar^3}\) là mật độ hạt có động lượng từ \(p \xrightarrow{}p+\mathrm{d}p\). Thế vào ta có áp suất do khí electron suy biến gây ra là 
+\begin{equation}
+    \begin{split}
+        P_e&=\int \frac{\mathrm{d}\phi}{\mathrm{d}t.\mathrm{d}S}=\int \left[v(p)\cos{\theta} \frac{p^2\mathrm{d}p}{\pi^2 \hbar^3}\frac{2\pi\sin{\theta}\mathrm{d}\theta}{4\pi}\right]p\cos{\theta} \\
+        &= \frac{8\pi^3}{2\pi^2h^3}\int_0^{p_F} p^3 v(p)\mathrm{d}p \int_0^{2\pi} \cos^2{\theta}\sin{\theta}\mathrm{d}\theta \\
+        &= \frac{8\pi}{3h^3}\int_0^{p_F} p^3 v(p)\mathrm{d}p
+    \end{split}
+    \label{eq:s5_7}
+\end{equation}
+\textbf{1.d)}
+Đặt hằng số Lorentz: \(\gamma=\frac{\displaystyle 1}{\sqrt{\displaystyle 1-\frac{v^2}{c^2}}}\)
+\vspace{2mm}
+
+Trước hết, ta xét động lượng và động năng của một hạt khí electron. Động lượng hạt electron là
+\begin{equation*}  
+    p = \gamma m v\Rightarrow 
+    v = \frac{p c}{\sqrt{m^2 c^2 + p^2}} .
+\end{equation*}
+Động năng một hạt electron là
+\begin{equation*}
+    K = (\gamma - 1) m c^2. 
+\end{equation*}
+Ta có thể thu được biểu thức 
+\begin{equation*}
+ v = \frac{p c}{\sqrt{m^2 c^2 + p^2}} \implies K 
+= \sqrt{p^2 c^2 + m^2 c^4}\; -\; m c^2
+\end{equation*}
+
+
+Theo ý 1.c, áp suất do hệ khí gây ra là:
+\begin{align*}
+P_e &= \frac{8\pi}{3h^3}\int_{0}^{p_F} p^3 v(p)\,dp,\\
+&= \frac{8\pi m^4 c^5}{3h^3}\int_{0}^{x_F}\frac{x^4}{\sqrt{1+x^2}}\,dx,
+\quad \text{với } x_F = \frac{p_F}{m c}.
+\end{align*}
+
+
+
+Theo đề, ta suy ra:
+\begin{equation}
+\quad
+P_e=\frac{\pi m^4 c^5}{3 h^3}\Big[x_F(2x_F^2-3)\sqrt{1+x_F^2}
++3\ln\big(x_F+\sqrt{1+x_F^2}\big)\Big],
+\qquad \text{Với }x_F=\frac{p_F}{m c}.
+\label{eq:s5_8}
+\end{equation}
+
+Tổng động năng của hệ khí electron là
+\begin{equation}
+\begin{split}
+    U &= \int K\mathrm{d}N \\
+    &= V \frac{8\pi}{h^3}\int_{0}^{p_F}\big(\sqrt{p^2c^2+m^2c^4}-mc^2\big) p^2 \mathrm{d}p \\
+    &=V \frac{8\pi m^4 c^5}{h^3}\int_{0}^{x_F}\big(\sqrt{1+x^2}-1\big)x^2 \mathrm{d}x \\
+    &=\frac{\pi V m^4 c^5}{3 h^3}\left[\ 3\left(x_F(2x_F^2+1)\sqrt{1+x_F^2}-\operatorname{arsinh}x_F\right)-8x_F^3\right],\qquad \text{Với } x_F=\frac{p_F}{mc}
+\end{split}
+\label{eq:s5_9}
+\end{equation}
+\vspace{2mm}
+
+\textbf{2. Khí electron siêu tương đối tính}
+
+\textbf{2.a)}
+Theo ý 1.d, ta có hàm mật độ động năng là:
+\begin{equation}
+    u=U/V=\frac{\pi  m^4 c^5}{3 h^3}\Big[\,3\big(x_F(2x_F^2+1)\sqrt{1+x_F^2}-\operatorname{arsinh}x_F\big)-8x_F^3\Big].
+    \label{eq:s5_10}
+\end{equation}
+
+Khi khí electron đạt trạng thái siêu tương đối tính thì \(x_F =\displaystyle\frac{p_F}{mc}\rightarrow \infty\)
+\begin{equation*}
+    \operatorname{arsinh} x=\ln(x+\sqrt{x^2+1}) \xrightarrow{\displaystyle x_F \rightarrow \infty} \ln(2x).
+\end{equation*}
+
+Rất bé so với các số hạng trong đa thức \(\left( \displaystyle
+\lim_{x \to \infty} \frac{\ln x}{x^{\alpha}} = 0 \quad \text{với mọi } \alpha > 0
+\right)\)
+Như vậy trong biểu thức trên ta chỉ cần giữ lại số hạng bậc cao nhất
+
+\begin{equation}
+    u= U/V \simeq \displaystyle\frac{\pi m^4c^5}{3h^3}6x_F^4=\frac{2\pi c}{h^3}\,p_F^4.
+    \label{eq:s5_11}
+\end{equation}
+
+Xấp xỉ tương tự cho hàm áp suất, ta được: 
+\begin{equation}
+    P_e=\frac{2\pi m^4 c^5}{3h^3}x_F^4=\frac{2\pi c}{3h^3}p_F^4.
+    \label{eq:s5_12}
+\end{equation}
+    
+\textbf{2.b)} Kết hợp 2 kết quả của ý 2.1, ta có: \(P_e=\displaystyle\frac{U}{3}\)
+\vspace{5mm}
+
+\textbf{3) Giới hạn Chandrasekhar:}
+
+\textbf{3.a)}
+
+Vì các hạt bị ion hóa hoàn toàn thế nên cứ một hạt ion sẽ sản sinh ra Z hạt electron, suy ra \(N_i=\displaystyle\frac{Ne}{Z}\). Mỗi một hạt ion có $A$ hạt nucleon (proton và neutron) nên có khối lượng gần bằng $Am_u$
+
+Tại một vị trí bất kỳ, mật độ khối lượng của sao là
+\begin{equation}
+    \rho_m=\frac{\mathrm{d}m}{\mathrm{d}V}=\frac{\mathrm{d}m_i}{\mathrm{d}V}=\frac{Am_u\mathrm{d}N_i}{\mathrm{d}V}=\frac{Am_u\mathrm{d}N_e}{Z\mathrm{d}V}=\mu_em_un_e.
+    \label{eq:s5_13}
+\end{equation}
+
+\textbf{3.b)}
+
+Ta xét phần khối lượng thế tích $\mathrm{d}V=\mathrm{d}S.\mathrm{d}r$ giới hạn giữa 2 mặt cầu bán kính \(r\) và \(r+\mathrm{d}r\).
+
+Khi ở trạng thái cân bằng, theo định luật I Newton, ta có:
+\begin{equation}
+p(r)\mathrm{d}S-p(r+dr)\mathrm{d}S+g(r)\mathrm{d}m=0
+\label{eq:s5_14}
+\end{equation}
+Trong đó, \( \mathbf{g(r)}=\displaystyle\frac{\mathbf{F}}{m}\) là vector cường độ trường hấp dẫn (Ý nghĩa giống như vector cường độ điện trường trong trường tĩnh điện). 
+
+\begin{equation*}
+\begin{split}
+    \implies \mathrm{d}p&=g(r)\frac{\mathrm{d}m}{\mathrm{d}S} =g(r)\rho_m\frac{\mathrm{d}V}{\mathrm{d}S}\\
+    \implies   \frac{\mathrm{d}p}{\mathrm{d}r}&=g(r)\rho_m\\ 
+\end{split}
+\end{equation*}
+
+Từ mối liên hệ giữa lực thế và thế năng, ta lại có: \( \mathbf{g(r)}=-\displaystyle\frac{\mathrm{d}\phi}{\mathrm{d}r}\)
+\begin{equation}
+        \implies    \frac{\mathrm{d}p}{\mathrm{d}r}=-\rho_m\frac{\mathrm{d}\phi(r)}{\mathrm{d}r}
+        \label{eq:s5_15}
+\end{equation}
+
+\textbf{3.c)}
+Dựa vào kết quả phần 2.a), ta có:
+
+\begin{equation}
+    \begin{split}
+        P_e &=\frac{2\pi c}{3h^3}p_F^4=\frac{2\pi c}{3h^3}(3\pi^2 \hbar^3n_e)^{4/3}\\
+        &= \frac{2\pi c h}{3} \left(\frac{3}{8\pi\mu_em_u}\right)^{4/3} \rho_m^{4/3}    
+    \end{split}
+\end{equation}
+
+Từ đó, ta có được các hằng số: 
+
+\begin{equation*}
+\left\{
+    \begin{array}{ccl}
+    K &=& \displaystyle\frac{2\pi c h}{3}\left(\frac{3}{8\pi \mu_e m_u}\right)^{4/3} \\
+    n &=& 3\\
+    \end{array}
+\right.
+\end{equation*}
+
+Thay \(P_e=K\rho_m^{\gamma}\) vào phương trình số (15):
+\begin{equation*}  
+\begin{array}{cccl}
+    \implies&\displaystyle K\gamma\rho_m^{\gamma-1} \frac{\text{d}\rho_m}{\text{d}r} &=&-\rho_m\frac{\text{d}\phi}{\text{d}r}\\
+    \implies&-K\gamma\rho_m^{\gamma-2}\text{d}\rho_m &=& \text{ d}\phi\\
+    \implies& \displaystyle-K\gamma\int_0^{\rho_c} \rho_m^{\gamma-2}\text{d}\rho &=&\displaystyle\int_0^{\phi_c} \text{d}\phi\\
+    \implies&   \displaystyle-K\gamma\frac{\rho_c^{\gamma-1}}{\gamma-1} &=&\phi_c\\
+    \implies&\rho_c&=&\displaystyle\left(-\frac{\gamma-1}{\gamma}\frac{\phi_c}{K}\right)^{1/(\gamma-1)}\\
+\end{array}
+\end{equation*}
+
+Thay \(\gamma=1+1/n\) vào phương trình trên, ta được:
+\begin{equation}
+    \displaystyle\rho_c=\left(-\frac{n}{n+1}\frac{\phi_c}{K}\right)^n
+    \label{eq:s5_17}
+\end{equation}
+
+\textbf{3.d)}
+
+Theo đề, từ phương trình Poisson:
+
+\begin{equation}
+\frac{1}{r^{2}} \frac{\mathrm{d}}{\mathrm{d}r} \!\left( r^{2} \frac{\mathrm{d}\Phi}{\mathrm{d}r} \right) = 4\pi G\,\rho_m .
+\end{equation}
+
+Ta thay \(r=z/C \), \(\phi=w\phi_c\) và \(\rho_m=w^n\rho_c\) vào phương trình trên
+
+\begin{equation*}
+    \begin{array}{ccccc}
+        \displaystyle\frac{C^2}{z^2}.C\frac{\text{d}}{\text{d}z
+        }\left(\frac{z^2}{C^2}.C\frac{\text{d}(\phi_cw)}{\text{d}z}\right) &-& 4\pi G\rho_cw^n&=&0  \\
+         \displaystyle C^2\phi_c.\frac{1}{z^2}\frac{\text{d}}{\text{d}z}\left(z^2\frac{\text{d}w}{\text{d}z}\right)& -& 4\pi G\rho_c w^n&=&0\\
+        \displaystyle\frac{4\pi G}{(n+1)K}\rho_c^{\frac{n-1}{n}}\phi_c \frac{1}{z^2}\frac{\text{d}}{\text{d}z}\left(z^2\frac{\text{d}w}{\text{d}z}\right)&-&4\pi G\rho_c w^n&=&0\\
+    \end{array}
+\end{equation*}
+
+Ta thay (17) vào, rút gọn được phương trình Lane-Emden:
+\begin{equation}
+    \displaystyle\frac{1}{z^2}\frac{\text{d}}{\text{d}z}\left(z^2\frac{\text{d}w}{\text{d}z}\right) + w^n=0
+    \label{eq:s5_19}
+\end{equation}
+
+\textbf{3.e)} Trước hết ta xét trường hợp tổng quát:
+
+Tổng khối lượng định xứ trong một mặt cầu có tâm trùng tâm sao và bán kính r là:
+
+\begin{equation}
+    m(r)=\int_0^r \rho_m4\pi r^2dr
+    \label{eq:s5_20}
+\end{equation}
+
+Thế \(\rho_m=\rho_c w^n\) và \(r=z/C\) vào (20):
+
+\begin{equation}
+    \displaystyle m(r)=\int_0^z \rho_cw^n4\pi \frac{1}{C^3}z^2\text{d}z=\frac{4\pi\rho_c}{C^3}\int_0^z w^nz^2\text{d}z
+    \label{eq:s5_21}
+\end{equation}
+
+Từ phương trình Lane-Emden ở ý 3.d), ta rút ra được:
+\begin{equation*}
+    \text{d}\left(-z^2\frac{\text{d}w}{\text{d}z}\right)= w^nz^2\text{d}z
+\end{equation*}
+
+Thay vào (21):
+
+\begin{equation}
+    \displaystyle m(r)=\frac{4\pi \rho_c}{C^3}\int \text{d}\left(-z^2\frac{\text{d}w}{\text{d}z}\right)=\frac{4\pi\rho_c}{C^3}\displaystyle\left.\left(-z^2\frac{\text{d}w}{\text{d}z}\right)\right|_{\displaystyle z}
+    \label{eq:s5_22}
+\end{equation}
+
+Vậy tổng khối lượng của sao lùn trắng:
+
+\begin{equation}
+    \displaystyle M=\frac{4\pi\rho_c}{C^3}\displaystyle\left.\left(-z^2\frac{\text{d}w}{\text{d}z}\right)\right|_{\displaystyle z=z_n}
+    \label{eq:s5_23}
+\end{equation}
+
+Thay \(\displaystyle C=\left(\frac{4\pi G}{(n+1)K}\rho_c^{(n-1)/n}\right)^{1/2}\) vào (\ref{eq:s5_23}), ta rút gọn được biểu thức tổng khối lượng:
+
+\begin{equation}
+\begin{array}{ccc}
+    \displaystyle M&=&\displaystyle\frac{4\pi\rho_c}{\displaystyle\left(\frac{4\pi G}{(n+1)K}\rho_c^{(n-1)/n}\right)^{3/2}}\displaystyle\left.\left(-z^2\frac{\text{d}w}{\text{d}z}\right)\right|_{\displaystyle z=z_n}\\ \\
+    &=& \displaystyle 4\pi \left.\left(\frac{n+1}{4\pi G}\right)^{3/2} K^{3/2} \rho_c^{\displaystyle\left(\frac{3-n}{2n}\right)}\left(-z^2\frac{\text{d}w}{\text{d}z}\right)\right|_{\displaystyle z=z_n}\displaystyle
+\end{array}
+\label{eq:s5_24}
+\end{equation}
+
+Đối với sao lùn trắng ở trạng thái suy biến và siêu tương đối tính \((n=3)\), ta có khối lượng của sao:
+
+\begin{equation}
+\begin{array}{ccc}
+    M&=& \displaystyle 4\pi \left.\left(\frac{K}{\pi G}\right)^{3/2}  \left(-z^2\frac{\text{d}w}{\text{d}z}\right)\right|_{\displaystyle z=z_3}\displaystyle\\ \\
+    &=& \displaystyle4\pi \left(\frac{2ch}{3G}\left(\frac{3}{8\pi\mu_em_u}\right)^{4/3}\right)^{3/2}\left.\left(-z^2 \frac{\text{d}w}{\text{d}z}\right)\right|_{\displaystyle z_3}
+\end{array}
+\end{equation}
+
+Thay các hằng số và dựa vào bảng số liệu \(\left.\left(\displaystyle-z^2 \frac{\text{d}w}{\text{d}z}\right)\right|_{\displaystyle z_3}=2.01824\), ta tính ra số hạn Chandrasekhar:
+\begin{equation*}
+    M_{ch}=\frac{5.836}{\mu_e^2}M_\odot.
+\end{equation*}
+
+Như vậy đối với sao lùn trắng cấu tạo thành nguyên từ He, ta có:
+\begin{equation*}
+    \begin{array}{cccc}
+       &\mu_e  &=& 2  \\
+      \implies &M_{ch} &= & 1.46M_\odot.
+    \end{array}
+\end{equation*}
+
+*Lưu ý: Học sinh có hướng làm khác vẫn được tính full điểm nếu đáp số ko lệch quá \(5\%\) so với lời giải tham khảo 
+
+*Nhận xét: Ta thấy với trường hợp sao lùn trắng suy biến hoàn toàn và siêu tương đối tính (n=3), tổng khối lượng hành tinh không còn phụ thuộc vào mật độ khối lượng trung tâm \(\rho_c\) hay bán kính \(R\) của sao lùn trắng. Cho nên, khối lượng sao lùn trắng sẽ đạt trạng thái ổn định là \(M_{ch}\), khi áp suất hấp dẫn cân bằng với áp suất do electron suy biến gây ra.
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{Kippenhahn} Kippenhahn, Rudolf, Alfred Weigert, and Achim Weiss. \textit{Stellar structure and evolution}. Vol. 192. Berlin: Springer-verlag, 1990.
+\end{thebibliography}

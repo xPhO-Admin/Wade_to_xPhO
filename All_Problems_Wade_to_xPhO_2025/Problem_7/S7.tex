@@ -1,0 +1,183 @@
+\textbf{1.}
+\begin{enumerate}[label = \alph*.]
+    \item Ta thể hàm sóng vào phương trình ta có
+    \begin{equation}
+    \begin{split}
+        &\ E_0 A e^{ i k n a} - t\left(A e^{ i k (n+1) a} + A e^{ i (k-1) n a}\right) = E_1(k) A e^{ i k n a}   \\
+        \Rightarrow& \  E_1(k) = E_0 - 2 t \cos{(k a)}.
+    \end{split}
+    \end{equation}
+    Ta có thể nhận ra rằng trong mô hình dẫn điện Tight-binding hệ thức liên hệ giữa vector sóng \(k\) (hoặc có thể nói là động lượng) khác hoàn toàn so với mô hình hạt di chuyển tự do. 
+    \item Do hệ \(N\) hạt là hệ tuần hoàn, nên ta coi như ta nối dài thêm với vô số các hệ \(N\) (tình huống này giống với bài 2). Như thế, hạt thứ \(N+1\) sẽ đóng vai trò như hạt thứ \(1'\) của hệ kế tiếp.  
+    \begin{equation}
+    \notag
+        \psi_{N+1} = \psi_{1'} = \psi_1
+    \end{equation}
+    Mà từ dạng hàm \(\psi\)
+    \begin{equation}
+    \begin{split}
+        &\psi_{N+1} = e^{ikNa} \psi_1 \\
+        \Leftrightarrow \  \ & e^{ikNa} = 1 \\
+        \Leftrightarrow \  \ & k = m \frac{2\pi}{Na}.
+    \end{split}
+    \end{equation}
+    Thực chất, phổ năng lượng các electron bên trong vật liệu là rời rạc. Điều này có thể giải thích thông qua mô hình và cả hàm sóng của electron. Trong mô hình này, các electron chỉ có thể chọn rời rạc và vị trí. Đồng thời hàm sóng của electron cũng phụ thuộc vào \(n\) là một biến rời rạc. Mà năng lượng là trị riêng của phương trình sóng (\(H | \psi \rangle = E | \psi \rangle \)).
+    \vspace{2mm}
+
+    Vì thế, năng lượng của electron là các điểm nằm trên đường \(E_1(k)\) và có giá trị \(k\) rời rạc và hai giá trị liền kề cách nhau bằng đúng \(\delta k = 2\pi/Na\) (hình \ref{fig:phổ năng lượng})
+
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.7\linewidth]{Problem_7/Figs_P7/Phổ năng lượng.pdf}
+        \caption{Phổ năng lượng rời rạc}
+        \label{fig:phổ năng lượng}
+    \end{figure}
+    
+    Từ đây dễ dàng biết được hai biên của vùng Brillouin thứ nhất 
+    \begin{equation}
+        k \in \left(-\frac{\pi}{a},\frac{\pi}{a}\right).
+    \end{equation}
+    \item Lúc này, ta sẽ tìm cách để biểu diễn \(N\) electron trên phổ năng lượng \(E_1\). Ta thực hiện một quá trình lắp đầy tấm vật liệu bằng từng electron.
+    \begin{enumerate}[label = ]
+        \item Electron thứ nhất \(\rightarrow\) ở toạ độ \((0,0)\).
+        \item Electron thứ hai \(\rightarrow\) ở toạ độ \((0,0)\).
+        \item Electron thứ ba \(\rightarrow\) ở toạ độ \(\left(\delta k, E_1(\delta k)\right)\) hoặc \(\left(-\delta k, E_1(-\delta k)\right)\).
+        \item Electron thứ tư \(\rightarrow\) ở toạ độ \(\left(\delta k, E_1(\delta k)\right)\) hoặc \(\left(-\delta k, E_1(-\delta k)\right)\).
+        \item \(\vdots\)
+    \end{enumerate}
+    
+    Kết quả là ta có electron được sắp xếp vào trong phổ năng lượng như hình \ref{fig:phổ năng lượng}. Lưu ý là với mỗi toạ độ \((E,k)\) (được biểu diễn bằng hình tròn đỏ) có thể chứa nhiều nhất \(2 e\). Thử lắp \(N\) electron vào như quy trình trên, ta có hình \ref{fig:Half fill}. Lưu ý, với \(N\) đủ lớn, thì tính chẵn lẻ không ảnh hưởng. Và nó luôn chiếm \(1/2\) vùng Brillouin thứ nhất, người ta gọi đây là "electron half fill space".
+    
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.7\linewidth]{Problem_7/Figs_P7/PNL_Half fill.pdf}
+        \caption{Electron half fill}
+        \label{fig:Half fill}
+    \end{figure}
+
+
+    \item Đầu tiên, ta có nhận xét rằng. Xét một electron ở toạ độ \((E,k)\), thì có ý nghĩa rằng electron này có mức năng lượng \(E\) và đang di chuyển theo chiều dương nếu \(k>0\) và ngược lại nếu \(k<0\). Vậy nên, chỉ cần có sự chênh lệch số lượng giữa các electron đi về phía chiều dương và chiều âm, thì sẽ có dòng điện xuất hiện.
+    \vspace{2mm}
+
+    \textit{\underline{Trường hợp 1:}}
+    
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.7\linewidth]{Problem_7/Figs_P7/PNL_Dẫn điện dương.pdf}
+        \caption{Dẫn điện theo chiều dương}
+        \label{fig:Dẫn điện dương}
+    \end{figure}
+    
+    \textit{\underline{Trường hợp 2:}}
+    
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.7\linewidth]{Problem_7/Figs_P7/PNL_Dẫn điện âm.pdf}
+        \caption{Dẫn điện theo chiều âm}
+        \label{fig:Dẫn điện âm}
+    \end{figure}
+
+    \textit{\underline{Trường hợp 3:}} Trường hợp này khi electron hai phía bằng nhau và triệt tiêu lẫn nhau. Và electron không còn vị trị nào khác để thêm vô.
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.7\linewidth]{Problem_7/Figs_P7/PNL_Cách điện.pdf}
+        \caption{Cách điện}
+        \label{fig:Cách điện}
+    \end{figure}
+\end{enumerate}
+
+\textbf{2.}
+\begin{enumerate}
+    \item Lúc này, hệ sẽ dao động với xu hướng có hai hạt nguyên tử liền kề tiến sát vào nhau. Bản chất thì chúng không biến thành một nguyên tử mới. Nhưng với mode dao động và chuyển động rất nhanh của chúng, khi ta quan sát trung bình của hệ, tính chất của nó gần như y hệ một hệ có độ dài đặc trưng \(2a\). 
+    \vspace{2mm}
+
+    Vậy thì vùng Brillouin thứ nhất là 
+    \begin{equation*}
+        k \in \left(-\frac{\pi}{2a}, \frac{\pi}{2a} \right), \ \ \ k_b = \frac{\pi}{2a}
+    \end{equation*}
+    Ta thấy rằng, vùng Brillouin thứ nhất bị rút gọn đi \(1/2\). Vậy với \(N\) electron trong vật liệu, chúng ta sẽ quay lại trường hợp vật liệu cách (3). Vậy nên, khi có sự tác động của ngoại lực thì vật liệu sẽ từ dẫn điện trở nên cách điện. Lưu ý, ngoại lực ở đây có thể là năng lượng từ việc đun nóng,....
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.45\linewidth]{Problem_7/Figs_P7/PNL_Half fill.pdf} 
+        \includegraphics[width=0.45\linewidth]{Problem_7/Figs_P7/PNL_Chuyển pha.pdf}
+        \caption{Chuyển pha Peierls}
+        \label{fig:placeholder}
+    \end{figure}
+
+    Tại ngay biên của vùng Brillouin thứ nhất mới, có sự gián đoạn một lượng \(\Delta\). 
+     \item Tại ngay biên, sẽ là chồng chập của hai hàm sóng. Hàm sóng của những electron của vùng Brillouin thứ nhất có xu hướng đi theo chiều dương \(| k \rangle\) và những electron vùng Brillouin thứ hai có xu hướng đi theo chiều âm  \(|-k \rangle\). 
+     \begin{equation*}
+         |\psi \rangle =  | k \rangle +  | -k \rangle.
+     \end{equation*}
+
+     Vậy thì tại lân cận tại biên, hàm sóng sẽ có thêm thành phần nhiễu loạn nhỏ, khiến cho phổ năng lượng bị thay đổi. Để có thể tìm được phổ năng lượng này, ta sẽ thực hiện chéo hoá trong cơ sở \(|k \rangle\) và \(|-k \rangle\) và thu được phương trình đặc trưng
+     \begin{equation}
+        \left[E_1(k) - E_2 \right] \left[E_1(-k) - E_2 \right] - \frac{\Delta^2}{4} = 0.
+     \end{equation}
+    Lưu ý rằng, phương trình trên chỉ đúng cho một vùng nhỏ ở biên. Ta có thể đặt nó là \(\Lambda = (k_b - \varepsilon, k_b + \varepsilon)\). Giá trị \(\varepsilon\) không quá quan trọng, nhưng bắt buộc phải tồn tại. Vì thế, nên phần lớn của phổ năng lượng cũ không hề thay đổi, chỉ có nhiễu loạn ở vùng biên hay vùng \(\Lambda\).
+    \vspace{2mm}
+
+    Tại lân cận biên thuộc vùng \(\Lambda\), ta xấp xỉ \(E_1(k)\) thành đường tuyến tính. Ta có thể suy ra từ kiến thức của phương trình đường thẳng
+    \begin{equation*}
+        E_1 = \alpha + \beta \left(k - \frac{\pi}{2a}\right).
+    \end{equation*}
+    Từ đây, ta có thể giải được phương trình đặc trưng, ta thu được
+    \begin{equation}
+        E_2 = \alpha \pm \sqrt{\beta^2 \left(k - \frac{\pi}{2a}\right)^2 + \frac{\Delta^2}{4}}.
+    \end{equation}
+    Trước tiên, ta thu được hai nghiệm, tương ứng với hai trị riêng. Nghiệm sẽ tương ứng lần lượt với hai hàm sóng \(|k \rangle\) và \(|-k \rangle\). Theo trực quan, ta nhận ra được hàm sóng tại vùng Brillouin thứ nhất có phổ năng lượng thấp hơn vùng Brillouin thứ hai. Vậy, phổ năng lượng mới của Brillouin thứ nhất thuộc vùng \(\Lambda_{1} = (k_b - \varepsilon, k_b)\) là \(E_{-}\). Tương tự, phổ năng lượng mới của Brillouin thứ hai thuộc vùng \(\Lambda_2 = (k_b, k_b +\varepsilon)\) là \(E_+\).
+    \begin{equation}
+        \begin{split}
+            E_- &= \alpha - \sqrt{\beta^2 \left(k - \frac{\pi}{2a}\right)^2 + \frac{\Delta^2}{4}}
+            \\
+            E_+ &= \alpha + \sqrt{\beta^2 \left(k - \frac{\pi}{2a}\right)^2 + \frac{\Delta^2}{4}}.
+        \end{split}
+    \end{equation}
+    
+    Ta nhận thấy rằng, tại đúng \(k=k_b\) thì \(E_+ - E_- = \Delta\) như giả thuyết ban đầu ta chọn. Lúc này, ta vẽ được phổ năng lượng mới như sau. Chỉ có những vùng \(\Lambda_1\) và \(\Lambda_2\) là bị biến đổi (được kí hiệu bằng màu đậm hơn; màu vàng là Brillouin thứ nhất, màu xanh là Brillouin thứ hai).
+    
+    \begin{equation*}
+        E(k) = \left\{
+        \begin{array}{ll}
+        E_0 - 2t \cos \left(k a \right) &, \ k \in \left(\displaystyle-\frac{\pi}{a}; -k_b -\varepsilon \right) \\[8pt]
+        E_+ &, \ k \in \left(-k_b -\varepsilon; -k_b \right)\\[8pt]
+        E_- &, \ k \in \left(-k_b; -k_b + \varepsilon \right)\\[8pt]
+        E_0 - 2t \cos \left(k a \right) &, \ k \in \left(-k_b+\varepsilon; k_b - \varepsilon \right)\\[8pt]
+        E_- &, \ k \in \left(k_b - \varepsilon; k_b \right)\\[8pt]
+        E_+ &, \ k \in \left(k_b ; k_b + \varepsilon \right)\\[8pt]
+        E_0 - 2t \cos \left(k a \right) &, \ k \in \left(k_b + \varepsilon;\displaystyle \frac{\pi}{a} \right)
+        \end{array}
+        \right.
+    \end{equation*}
+    
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=1\linewidth]{Problem_7/Figs_P7/Phổ năng lượng mới.pdf}
+        \caption{Phổ năng lượng mới}
+        \label{fig:phổ năng lượng mới}
+    \end{figure}
+    
+    Để tính năng lượng biến thiên của electron, ta tính độ biến thiên trong vùng Brillouin thứ nhất. Vì đây là vùng có chứa electron. Và lưu ý, ở đây ta sẽ biến hệ rời rạc thành liên tục
+    \begin{equation}
+        \Delta U = \sum_{-k_b}^{k_b} 2 \left(E_- - E_0 \right) = 2  \frac{Na}{2 \pi}\int_{-k_b}^{k_b}  \left(E_- - E_0 \right) \mathrm{d}k.
+    \end{equation}
+    Với \(Na/2\pi\) là mật độ trạng thái của electron. 
+    
+    Ta thấy rằng, chỉ trong vùng lân cận với biên thì electron mới bị thay đổi phổ năng lượng. Vậy độ biến thiên là 
+    \begin{equation}
+        \begin{split}
+            \Delta U &= \frac{Na}{\pi} \left[\int_{-k_b}^{-k_b+\varepsilon}  \left(E_- - E_0 \right) \mathrm{d}k + \int_{k_b}^{k_b - \varepsilon}  \left(E_- - E_0 \right) \mathrm{d}k \right] \\
+            &= -\frac{2Na}{\pi} \int_{k_b-\varepsilon}^{k_b} \left [  \sqrt{\beta^2 \left(k - \frac{\pi}{2a}\right)^2 + \frac{\Delta^2}{4}} + \beta \left( k - \frac{\pi}{2a}\right) \right] \mathrm{d}k \\
+            &= -\frac{2Na}{\pi} \int_{-\varepsilon}^{0} \left [  \sqrt{\beta^2 q^2 + \frac{\Delta^2}{4}} + \beta q \right] \mathrm{d}q \\
+            &= \displaystyle -\frac{2Na}{\pi} \left[\frac{\displaystyle\Delta^2  \ln\left(\frac{2\beta \varepsilon}{\displaystyle \Delta} + \sqrt{\frac{\displaystyle 2\beta \varepsilon}{\displaystyle \Delta}+1} \right)}{8} + \frac{\displaystyle \beta \varepsilon \sqrt{\beta \varepsilon^2 + \frac{\Delta^2}{4}}-\beta \varepsilon^2}{2} \right] \\
+            &\simeq -\frac{Na}{\pi} \left[ \frac{\Delta^2}{8\beta} - \frac{\Delta^2}{4} \ln \left(\frac{\Delta}{4\beta \varepsilon} \right) \right].
+        \end{split}
+    \end{equation}
+    Ở dòng cuối ta đã sử dụng xấp xỉ rằng \(\Delta \ll \beta \varepsilon\). Ý nghĩa muốn nói rằng khoảng \(\Delta\) là rất nhỏ.
+\end{enumerate}
+
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{DavidTong} David Tong. "Solid State Physics." University of Cambridge (2017) : 26 - 116.
+\end{thebibliography}

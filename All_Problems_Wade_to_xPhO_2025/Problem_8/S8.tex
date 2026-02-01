@@ -1,0 +1,371 @@
+
+
+\textbf{A.Linear quadrupole trap}  
+\vspace{2mm}
+
+\textbf{A.1}
+
+    Trước mắt ta xét điều kiện của điện trường trong không gian bẫy, ta có cường độ điện trường trong bẫy là:
+    \begin{equation}
+    \notag
+        \mathbf{E} = -\mathbf{\nabla} V = -\frac{\partial V}{\partial x}\mathbf{i} - \frac{\partial V}{\partial y}\mathbf{j} = -(a + 2cx)\mathbf{i} - (b + 2dy)\mathbf{j}.
+    \end{equation}
+    
+    Do sự phân bố đối xứng của các ống trụ, cường độ điện trường tổng hợp tại gốc tọa độ bị triệt tiêu bởi 2 ống nằm trên cùng một đường chéo.
+    \begin{equation*}
+         \mathbf{E}_{(0,0)} = \mathbf{0} \implies \left\{ \begin{array}{l} a = 0 \\ b = 0 \end{array} \right.
+    \end{equation*}
+ Vì trong bẫy không có phân bố điện tích $\implies \text{div}\mathbf{E} = \rho/\epsilon_0 = 0$
+    
+     \begin{equation}
+     \label{eq:s8_1}
+         \frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} = 0 \implies -2c - 2d = 0 \implies c = -d
+     \end{equation}
+
+    Ta xét thêm điều kiện biên của điện thế tại các vị trí đặc biệt 
+
+\begin{equation}
+    \left\{
+    \begin{array}{l}
+        \text{Tại} \  (0, r_0): V_{(0, r_0)} = V_{(0,0)} + d r_0^2 = 0 \\
+        \text{Tại} \  (r_0, 0): V_{(r_0, 0)} = V_{(0,0)} + c r_0^2 = V_0.
+    \end{array}
+    \right.
+    \label{eq:s8_2}
+\end{equation}
+
+Từ phương trình \ref{eq:s8_1} và \ref{eq:s8_2} , suy ra:
+
+\setlength{\extrarowheight}{9pt}
+
+\begin{equation}
+\left\{
+\begin{array}{lcr}
+      V  & = & \displaystyle\frac{V_0}{2}   \\
+      c  &  =   & \displaystyle\frac{V_0}{2r_0^2}  \\
+      \text{d}  &  \text{=}   & \text{\(\displaystyle-\frac{V_0}{2r_0^2}\)}
+\end{array}
+\right.
+\label{eq:s8_3}
+\end{equation}
+
+Thế vào ta được điện thế V có dạng:
+\begin{equation}
+    V = \frac{V_0}{2} \left(1 + \frac{x^2 - y^2}{r_0^2}\right).
+    \label{eq:s8_4}
+\end{equation}
+
+\textbf{A.2}
+\vspace{2mm}
+
+Với hàm điện thế đã chứng minh ở trên. Ta dễ dàng suy ra điện trường bằng công thức $\mathbf{E} = -\mathbf{\nabla} V$.
+\begin{equation}
+\begin{split}
+        \mathbf{E} &= -\frac{\partial V}{\partial x}\mathbf{i} - \frac{\partial V}{\partial y}\mathbf{j} \\ &= \left(-\frac{2x}{r_0^2}\frac{V_0}{2}\right)\mathbf{i} - \left(\frac{-2y}{r_0^2}\frac{V_0}{2}\right)\mathbf{j} \\ &= \frac{ V_0}{r_0^2}\left(-x\mathbf{i} + y \mathbf{j} \right).
+\end{split}
+\label{eq:s8_5}
+\end{equation}
+
+
+Xét một điện tích Q trong bẫy, lực điện tác dụng lên điện tích $Q$ trong bẫy: $\mathbf{F} = Q\mathbf{E}$
+\begin{equation}
+    \mathbf{F} = \frac{Q V_0}{r_0^2}\left(-x\mathbf{i} + y \mathbf{j} \right).
+    \label{eq:s8_6}
+\end{equation}
+
+Giả sử $Q V_0 > 0$:
+\begin{itemize}
+    \item Trên trục $Ox$: $\displaystyle F_x = -\frac{Q V_0}{r_0^2} x$. Lực $F_x$ có dạng lực kéo về (vì $F_x$ và $x$ ngược dấu).
+    \item Trên trục $Oy$: $\displaystyle F_y = \frac{Q V_0}{r_0^2} y$. Lực $F_y$ đẩy điện tích ra xa khỏi vị trí cân bằng (vì $F_y$ và $y$ cùng dấu).
+\end{itemize}
+
+\textbf{Nhận xét:} Vị trí cân bằng là gốc tọa độ (0,0). Điện tích $Q$ bị đẩy ra xa theo trục $Oy$. Lập luận tương tự với $Q V_0 < 0$, suy ra hàm điện thế tĩnh này không thể giam giữ một hạt điện ổn định.
+\vspace{5mm}
+
+\textbf{B. Bẫy Paul hiệu chỉnh}
+\vspace{5mm}
+
+\textbf{B.1}
+Thay $V_0$ bằng $V(t) = V_{DC} + V_{AC} \cos(\Omega t)$ vào công thức \ref{eq:s8_5}.
+\begin{equation}
+    \mathbf{E} = \frac{V_{DC} + V_{AC} \cos(\Omega t)}{r_0^2}\left(-x\mathbf{i} + y \mathbf{j} \right)
+    \label{eq:s8_7}
+\end{equation}
+
+Lực điện tác dụng lên điện tích Q là $\mathbf{F} = Q\mathbf{E}$
+\begin{equation}
+    \mathbf{F} = \frac{Q\left[V_{DC} + V_{AC} \cos(\Omega t)\right]}{r_0^2}\left(-x\mathbf{i} + y \mathbf{j} \right)
+    \label{eq:s8_8}
+\end{equation}
+
+Từ định luật II Newton, ta chiếu lên 2 trục thành hai phương trình như sau:
+
+\begin{equation}
+\label{eq:s8_9} % Có thể đặt nhãn để tham chiếu
+\left\{
+\begin{aligned}
+    m\ddot{x} &=& -\frac{Q}{r_0^2} \left[V_{DC} + V_{AC} \cos(\Omega t)\right] x \\
+    m\ddot{y} &=& \frac{Q}{r_0^2} \left[V_{DC} + V_{AC} \cos(\Omega t)\right] y
+\end{aligned}
+\right.
+\end{equation}
+
+Đổi biến thời gian:
+
+\begin{equation}
+\begin{array}{cccccc}
+        &   \tau    &   =   &\displaystyle\frac{\Omega t}{2} \\
+    \implies    &   \displaystyle\frac{dx}{d\tau}   &   =   &   \displaystyle\frac{dx}{dt}\frac{d\tau}{dt}  &   =   &   \displaystyle\frac{dx}{d\tau}\frac{\Omega}{2}\\
+    \implies    &  \displaystyle\frac{d^2 x}{dt^2}&=& \displaystyle\frac{d}{dt} \left(\frac{dx}{d\tau} \frac{\Omega}{2}\right) &=& \displaystyle\frac{d}{d\tau} \left(\frac{dx}{d\tau} \frac{\Omega}{2}\right) \frac{d\tau}{dt} \\
+
+    \implies    &  \displaystyle\frac{d^2 x}{dt^2}&=& \displaystyle\frac{d^2 x}{d\tau^2} \left(\frac{\Omega}{2}\right)^2
+\end{array}
+\label{eq:s8_10}
+\end{equation}
+Thế vào phương trình chuyển động theo trục \(x\) (từ 1):
+\begin{equation*}
+    \begin{array}{cccc}
+    &m\ddot{x}  & =&\displaystyle -\frac{Q}{r_0^2}(V_{DC} + V_{AC} \cos(\Omega t)) x \\
+    \implies&\displaystyle m \frac{\Omega^2}{4} x''_{\tau}&=& \displaystyle-\frac{Q}{r_0^2}(V_{DC} + V_{AC} \cos(\Omega t)) x. \
+    \end{array}
+\end{equation*}
+Chia cả hai vế cho \( m \Omega^2/4\):
+
+\begin{equation}
+    \begin{split}
+        &x''_{\tau} = -\left( \frac{4Q V_{DC}}{m\Omega^2 r_0^2} + \frac{4Q V_{AC} \cos(2\tau)}{m\Omega^2 r_0^2} \right) x  \\
+        \implies &x''_{\tau} + \left( \frac{4Q V_{DC}}{m\Omega^2 r_0^2} + \frac{4Q V_{AC} \cos(2\tau)}{m\Omega^2 r_0^2} \right) x = 0
+    \end{split}
+    \label{eq:s8_11}
+\end{equation}
+
+Đặt các tham số Mathieu:
+\begin{equation*}
+    a = \frac{4Q V_{DC}}{m\Omega^2 r_0^2} \quad \text{và} \quad q = \frac{2Q V_{AC}}{m\Omega^2 r_0^2}.
+\end{equation*}
+
+Ta rút gọn biểu thức \ref{eq:s8_12} thành
+
+\begin{equation}
+    x''_\tau + (a + 2q \cos(2\tau)) x = 0.
+    \label{eq:s8_12}
+\end{equation}
+
+Tương tự, phương trình chuyển động theo trục \(y\) là:
+\begin{equation}
+    y''_{\tau} -(a + 2q \cos(2\tau))y = 0.
+    \label{eq:s8_13}
+\end{equation}
+
+\textbf{B.2}
+
+Ta có: \(V_{DC} = 0 \implies a = 0\). Lúc này, Ion được giam giữ ổn định khi đường $a=0$ trên biểu đồ nằm trong vùng stable (cân bằng trên 2 phương). Từ biểu đồ, ta thấy đường $a=0$ nằm trong vùng ổn định khi \(0 \leq q \leq 0.9\).
+
+\begin{align*}
+    \implies& q \leq 0.9 \implies \frac{2Q V_{AC}}{m\Omega^2 r_0^2} \leq 0.9 \\
+    \implies& V_{AC} \leq \frac{0.9 \cdot m\Omega^2 r_0^2}{2Q} \\
+    \implies& V_{AC} \leq 180.8\, (\text{V})  
+\end{align*}
+Vậy điện thế hiệu dụng: \( V_{HD} \leq 128\, (\text{V})\).
+\vspace{5mm}
+
+\textbf{B.3}
+\vspace{2mm}
+
+Sử dụng xấp xỉ đề cho
+\begin{equation*}
+    x(\tau) = X(\tau) + \epsilon_{x}(\tau), \quad \epsilon_{x}(\tau) \ll X(\tau)
+\end{equation*}
+
+Thế vào phương trình Mathieu (\ref{eq:s8_12})
+\(x''_{\tau} + (a + 2q \cos(2\tau)) x = 0\):
+\begin{equation}
+X''(\tau) + \epsilon''_{x} (\tau) + (a + 2q \cos(2\tau)) (X(\tau) + \epsilon_{x} (\tau)) = 0
+\label{eq:s8_14}
+\end{equation}
+Xét chuyển động nhanh (quiver: $\epsilon_{x}$):
+\begin{itemize}
+    \item[-] Chuyển động này bị chi phối bởi thành phần dao động nhanh (tần số $2\tau$) và xem $X$ là hằng số  \(\left( X(\tau)''\ll \epsilon_{x}(\tau)''\right)\)
+    \item[-] Theo đề bài, ta có: $a \ll q$
+\end{itemize}
+Từ 2 dữ kiện này, ta xấp xỉ: 
+\begin{equation}
+    \epsilon''_{x} (\tau) \approx -2q X(\tau) \cos(2\tau)
+    \label{eq:s8_15}
+\end{equation}
+
+Đây là phương trình dao động điều hòa  
+\begin{equation}
+    \epsilon_{x} (\tau) \approx \frac{q X(\tau)}{2} \cos(2\tau).
+    \label{eq:s8_16}
+\end{equation}
+
+\noindent
+Tương tự cho chuyển động quiver trên trục $y$:
+\begin{equation}
+\left\{
+\begin{array}{l}
+    Y''(\tau) + \epsilon''_{y(\tau)} - (a + 2q \cos(2\tau)) (Y(\tau) + \epsilon_{y(\tau)}) = 0 \\ \\
+    \epsilon_{y(\tau)} \approx -\dfrac{q \cos(2\tau)}{2} Y(\tau).
+\end{array}
+\right.
+\label{eq:s8_17}
+\end{equation}
+
+\vspace{2mm}
+
+\textbf{B.4}
+\vspace{2mm}
+
+Ta khảo sát chuyển động trên trục $Ox$ trước.
+\vspace{2mm}
+
+Theo phương trình \ref{eq:s8_15}, ta thay biểu thức này vào phương trình \ref{eq:s8_14}, ta được
+\begin{equation}
+    X''(\tau)  + a  X(\tau)  + (a + 2q \cos(2\tau)) \epsilon_{x} (\tau) = 0.
+    \label{eq:s8_18}
+\end{equation}
+
+Thay biểu thức \(\epsilon_{x} (\tau) \) vào biểu thức trên:
+
+\begin{equation}
+    X''(\tau)  + a  X(\tau)  + \left(\frac{aq}{2} \cos{(2\tau)} + q^2 \cos^2(2\tau)\right) X(\tau) = 0.
+    \label{eq:s8_19}
+\end{equation}
+
+Khi khảo sát chuyển động Drift, chuyển động quiver lúc này là rất nhanh với tần số góc \(\Omega/2\), do đó phương trình ngay phía trên ta có thể lấy trung bình theo thời gian của chuyển động quiver.
+
+
+\begin{equation}
+    X''(\tau)  + a  X(\tau)  + \left(\frac{aq}{2} \langle \cos{2\tau} \rangle + q^2 \langle \cos^2{2\tau} \rangle \right) X(\tau) = 0.
+    \label{eq:s8_20}
+\end{equation}
+
+
+Lại có: 
+\(\langle \cos{2\tau} \rangle = 0 \ \text{và} \ \langle \cos^2{2\tau} \rangle = 0.5\). Dẫn tới phương trình chuyển động Drift:
+\begin{equation}
+    X''(\tau)  + \left(a + \frac{q^2}{2} \right)X(\tau) = 0
+    \label{eq:s8_21}
+\end{equation}
+
+Phương trình trên là phương trình dao động điều hòa có nghiệm là 
+\begin{equation}
+    \begin{split}
+        &X(\tau)= A\cos{\left(\sqrt{a + \frac{q^2}{2}}\tau + \phi_x\right)} \\
+        \implies &X(t)=A\cos{\left(\sqrt{a + \frac{q^2}{2}}\frac{\Omega t}{2} + \phi_x\right)}
+    \end{split}
+    \label{eq:s8_22}
+\end{equation}
+
+\textbf{Nhận xét:} Tần số góc chuyển động Drift rất bé so với chuyển động quiver \(\sqrt{a + \frac{q^2}{2}}\frac{\Omega}{2} \ll \Omega\). Từ đó thỏa mãn giả thiết ở đầu bài.
+\vspace{2mm}
+
+Phương trình chuyển động toàn phần trên phương $Ox$:
+\begin{equation}
+    \begin{split}
+        x(t) &=X(t) +\epsilon_{x(t)}=\left(1+\frac{q}{2}\cos{(\Omega t)}\right)X(t) \\
+         &=A\left(1+\frac{q}{2}\cos{(\Omega t)}\right)\cos{\left(\sqrt{a + \frac{q^2}{2}}\frac{\Omega t}{2} + \phi_x\right)}.
+    \end{split}
+    \label{eq:s8_23}
+\end{equation}
+
+Tại thời điểm ban đầu: \(t=0\), điện tích đứng yên tại \(x_0\), suy ra điều kiên biên là \(x=x_0\) và \(x'=0\)
+
+\begin{equation}
+    \begin{split}
+        &\left\{
+        \begin{array}{ccc}
+        A\left(1+\frac{q}{2}\right)\cos{\phi_x}&=&x_0\\
+        -A\left(1+\frac{q}{2}\right)\sin{\phi_x}&=&0\\
+        \end{array}
+        \right. \\
+        \implies&\left\{
+        \begin{array}{ccc}
+        \sin{\phi_x}&=&0\\
+        \cos{\phi_x}&=&1\\
+         A&=&\displaystyle \frac{x_0}{\displaystyle \left(1+\frac{q}{2}\right)}
+        \end{array}
+        \right. \\
+    \end{split}
+    \label{eq:s8_24}
+\end{equation}
+Từ đây ta tìm được 
+\begin{equation}
+    x(t)=\frac{x_0}{\left(1+\frac{q}{2}\right)}\left(1+\frac{q}{2}\cos{(\Omega t)}\right)\cos{\left(\sqrt{a + \frac{q^2}{2}} \ \frac{\Omega t}{2}\right)}.
+    \label{eq:s8_25}
+\end{equation}
+
+Lặp lại quá trình suy luận và giải phương trình cho chuyển động theo phương $Oy$, ta có được:
+\begin{equation}
+    y(t)=\frac{y_0}{(1-\frac{q}{2})}\left(1-\frac{q}{2}\cos{(\Omega t)}\right)\cos{\left(\sqrt{-a + \frac{q^2}{2}}\ \frac{\Omega t}{2}\right)}.
+    \label{eq:s8_26}
+\end{equation}
+
+Vậy phương trình chuyển động của hạt là: 
+
+\begin{equation*}
+\left\{
+    \begin{array}{l}
+        x(t)=\frac{x_0}{\left(1+\frac{q}{2}\right)}\left(1+\frac{q}{2}\cos{(\Omega t)}\right)\cos{\left(\sqrt{a + \frac{q^2}{2}} \ \frac{\Omega t}{2}\right)} \\ 
+        x(t)=\frac{y_0}{(1-\frac{q}{2})}\left(1-\frac{q}{2}\cos{(\Omega t)}\right)\cos{\left(\sqrt{-a + \frac{q^2}{2}}\ \frac{\Omega t}{2}\right)}.
+    \end{array}
+\right.
+\end{equation*}
+
+
+*Lưu ý: Vì \( a\ll q \ll 1\), cho nên kết quả biên độ dao động Drift \((A_x,A_y)=(x_0,y_0)\) và tần số góc dao động Drift \(\displaystyle\frac{\sqrt2}{4}q\Omega\) Vẫn được cho điểm tối đa.
+
+\textbf{B.5}
+\vspace{2mm}
+
+Ta biết chuyển động Drift \(\left(X, Y \right)\) là hai dao động điều hoà. Ta sẽ có hệ phương trình vi phân.
+\begin{equation}
+\left\{
+\begin{array}{ccc}
+ mX(t)''&=& -m\left(\displaystyle a+\frac{q^2}{2}\right)X\\
+ mY(t)''&=& -m\left(\displaystyle-a+\frac{q^2}{2}\right)Y.
+\end{array}
+\right.
+\label{eq:s8_27}
+\end{equation}
+
+Vì chuyển động Drift được coi như chịu tác dụng của lực Ponderomotive, ta có:
+
+\begin{equation}
+\left\{
+\begin{array}{ccccc}
+F_x &=& mX(t)''&=& -m\left(\displaystyle a+\frac{q^2}{2}\right)X\\
+F_y &=& mY(t)''&=& -m\left(\displaystyle-a+\frac{q^2}{2}\right)Y.
+\end{array}
+\right.
+\label{eq:s8_28}
+\end{equation}
+
+Từ đó, ta có được phương trình lực Ponderomotive như sau: 
+
+\[
+\mathbf{F_{pond}}=-m\left(a+\frac{q^2}{2}\right)X\mathbf{i}-m\left(-a+\frac{q^2}{2}\right)Y\mathbf{j}
+\]
+
+Thế năng do lực Ponderomotive gây ra là:
+\begin{equation}
+\begin{split}
+    U_{pond}&=-\int \mathbf{F_{pond}}.\mathbf{\mathrm{d}r}=-\int_0^x \left(F_{pond}\right)_x\mathrm{d}X -\int_0^y \left(F_{pond}\right)_y\mathrm{d}Y \\
+    &= -\int_0^x  -m\left(a+\frac{q^2}{2}\right)X\mathrm{d}X-\int_0^y -m\left(-a+\frac{q^2}{2}\right)Y\mathrm{d}Y \\
+    &= \frac{1}{2}m\left(a+\frac{q^2}{2}\right)X^2 +\frac{1}{2}m\left(-a+\frac{q^2}{2}\right)Y^2 
+\end{split}
+\end{equation}
+
+
+*Nhận xét: Hàm thế năng lúc này có dạng giống thế năng đàn hồi do lò xo gây ra trên cả 2 phương \(x\) và \(y\), khiến cho điện tích Q bị kéo về vị trí cân bằng (0,0) trên cả 2 phương, dẫn tới bẫy sẽ nhốt điện tích một cách hiệu quả hơn.
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{Major}
+Major, Fouad G., Viorica N. Gheorghe, and Achim Weiss.
+\textit{Charged Particle Traps: Physics and Techniques of Charged Particle Field Confinement}. Vol. 37.
+Berlin: Springer, 2005.
+
+\end{thebibliography}

@@ -1,0 +1,72 @@
+\documentclass{standalone}
+
+\usepackage[OT1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{helvet,sfmath}
+\usepackage{siunitx}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc,patterns}
+% \usetikzlibrary{intersections, calc, arrows.meta}
+\usepackage{tikz,tkz-euclide}\usepackage{tikz}
+\usepackage{amsmath}
+
+
+\begin{document}
+
+
+
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,6336); %set diagram left start at 0, and has height of 6336
+
+%Straight Lines [id:da1818243396448691] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (220.75,5753.29) -- (220.75,5828.58) ;
+%Straight Lines [id:da29484557407976764] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (220.75,5678) -- (220.75,5753.29) ;
+%Straight Lines [id:da6355547640804441] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (220.75,5753.29) -- (143,5753.29) ;
+%Straight Lines [id:da17969021563670518] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (298.5,5753.29) -- (220.75,5753.29) ;
+%Shape: Circle [id:dp03940540348101729] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (208.75,5753.29) .. controls (208.75,5746.66) and (214.12,5741.29) .. (220.75,5741.29) .. controls (227.38,5741.29) and (232.75,5746.66) .. (232.75,5753.29) .. controls (232.75,5759.92) and (227.38,5765.29) .. (220.75,5765.29) .. controls (214.12,5765.29) and (208.75,5759.92) .. (208.75,5753.29) -- cycle ;
+%Shape: Circle [id:dp5388643578901479] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][dash pattern={on 0.84pt off 2.51pt}] (286.5,5753.29) .. controls (286.5,5746.66) and (291.87,5741.29) .. (298.5,5741.29) .. controls (305.13,5741.29) and (310.5,5746.66) .. (310.5,5753.29) .. controls (310.5,5759.92) and (305.13,5765.29) .. (298.5,5765.29) .. controls (291.87,5765.29) and (286.5,5759.92) .. (286.5,5753.29) -- cycle ;
+%Shape: Circle [id:dp9344311932328688] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][dash pattern={on 0.84pt off 2.51pt}] (208.75,5678) .. controls (208.75,5671.37) and (214.12,5666) .. (220.75,5666) .. controls (227.38,5666) and (232.75,5671.37) .. (232.75,5678) .. controls (232.75,5684.63) and (227.38,5690) .. (220.75,5690) .. controls (214.12,5690) and (208.75,5684.63) .. (208.75,5678) -- cycle ;
+%Shape: Circle [id:dp5758049241159873] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][dash pattern={on 0.84pt off 2.51pt}] (131,5753.29) .. controls (131,5746.66) and (136.37,5741.29) .. (143,5741.29) .. controls (149.62,5741.29) and (155,5746.66) .. (155,5753.29) .. controls (155,5759.92) and (149.62,5765.29) .. (143,5765.29) .. controls (136.37,5765.29) and (131,5759.92) .. (131,5753.29) -- cycle ;
+%Shape: Circle [id:dp4191345451107271] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][dash pattern={on 0.84pt off 2.51pt}] (208.75,5828.58) .. controls (208.75,5821.95) and (214.12,5816.58) .. (220.75,5816.58) .. controls (227.38,5816.58) and (232.75,5821.95) .. (232.75,5828.58) .. controls (232.75,5835.2) and (227.38,5840.58) .. (220.75,5840.58) .. controls (214.12,5840.58) and (208.75,5835.2) .. (208.75,5828.58) -- cycle ;
+%Shape: Rectangle [id:dp48887043827628385] 
+\draw   (181.87,5715.64) -- (259.62,5715.64) -- (259.62,5790.93) -- (181.87,5790.93) -- cycle ;
+%Shape: Rectangle [id:dp01895859066857486] 
+\draw   (430.5,5715.64) -- (508.25,5715.64) -- (508.25,5790.93) -- (430.5,5790.93) -- cycle ;
+%Shape: Circle [id:dp045658195160060866] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][dash pattern={on 0.84pt off 2.51pt}] (418.5,5715.64) .. controls (418.5,5709.02) and (423.87,5703.64) .. (430.5,5703.64) .. controls (437.13,5703.64) and (442.5,5709.02) .. (442.5,5715.64) .. controls (442.5,5722.27) and (437.13,5727.64) .. (430.5,5727.64) .. controls (423.87,5727.64) and (418.5,5722.27) .. (418.5,5715.64) -- cycle ;
+%Shape: Arc [id:dp03277979163058209] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (442.29,5715.64) .. controls (442.29,5715.64) and (442.29,5715.64) .. (442.29,5715.64) .. controls (442.29,5715.64) and (442.29,5715.64) .. (442.29,5715.64) .. controls (442.29,5722.16) and (437.01,5727.44) .. (430.5,5727.44) -- (430.5,5715.64) -- cycle ; \draw   (442.29,5715.64) .. controls (442.29,5715.64) and (442.29,5715.64) .. (442.29,5715.64) .. controls (442.29,5715.64) and (442.29,5715.64) .. (442.29,5715.64) .. controls (442.29,5722.16) and (437.01,5727.44) .. (430.5,5727.44) ;  
+%Shape: Circle [id:dp7812797243294436] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][dash pattern={on 0.84pt off 2.51pt}] (496.25,5715.64) .. controls (496.25,5709.02) and (501.62,5703.64) .. (508.25,5703.64) .. controls (514.88,5703.64) and (520.25,5709.02) .. (520.25,5715.64) .. controls (520.25,5722.27) and (514.88,5727.64) .. (508.25,5727.64) .. controls (501.62,5727.64) and (496.25,5722.27) .. (496.25,5715.64) -- cycle ;
+%Shape: Arc [id:dp28761999235419355] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (508.25,5727.44) .. controls (508.25,5727.44) and (508.25,5727.44) .. (508.25,5727.44) .. controls (501.74,5727.44) and (496.46,5722.16) .. (496.46,5715.64) -- (508.25,5715.64) -- cycle ; \draw   (508.25,5727.44) .. controls (508.25,5727.44) and (508.25,5727.44) .. (508.25,5727.44) .. controls (501.74,5727.44) and (496.46,5722.16) .. (496.46,5715.64) ;  
+%Shape: Circle [id:dp05021948378223606] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][dash pattern={on 0.84pt off 2.51pt}] (496.25,5790.93) .. controls (496.25,5784.3) and (501.62,5778.93) .. (508.25,5778.93) .. controls (514.88,5778.93) and (520.25,5784.3) .. (520.25,5790.93) .. controls (520.25,5797.56) and (514.88,5802.93) .. (508.25,5802.93) .. controls (501.62,5802.93) and (496.25,5797.56) .. (496.25,5790.93) -- cycle ;
+%Shape: Circle [id:dp19691762335808327] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][dash pattern={on 0.84pt off 2.51pt}] (418.5,5790.93) .. controls (418.5,5784.3) and (423.87,5778.93) .. (430.5,5778.93) .. controls (437.13,5778.93) and (442.5,5784.3) .. (442.5,5790.93) .. controls (442.5,5797.56) and (437.13,5802.93) .. (430.5,5802.93) .. controls (423.87,5802.93) and (418.5,5797.56) .. (418.5,5790.93) -- cycle ;
+%Shape: Arc [id:dp7498216999128668] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (496.46,5790.93) .. controls (496.46,5784.42) and (501.74,5779.14) .. (508.25,5779.14) -- (508.25,5790.93) -- cycle ; \draw   (496.46,5790.93) .. controls (496.46,5784.42) and (501.74,5779.14) .. (508.25,5779.14) ;  
+%Shape: Arc [id:dp9520650235784736] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (430.5,5779.14) .. controls (437.01,5779.14) and (442.29,5784.42) .. (442.29,5790.93) -- (430.5,5790.93) -- cycle ; \draw   (430.5,5779.14) .. controls (437.01,5779.14) and (442.29,5784.42) .. (442.29,5790.93) ;  
+
+% Text Node
+\draw (143,5853) node [anchor=north west][inner sep=0.75pt]   [align=left] {(A)};
+% Text Node
+\draw (430.5,5853) node [anchor=north west][inner sep=0.75pt]   [align=left] {(B)};
+
+
+\end{tikzpicture}
+\end{document}

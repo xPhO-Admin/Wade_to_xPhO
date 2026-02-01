@@ -1,0 +1,247 @@
+\textbf{1.}
+\begin{enumerate}[label = \textbf{\roman*.}]
+    \item \textbf{a)} 
+    
+    Ta nhận xét rằng nếu \(\psi(\mathbf{r})\) là một hàm tuần hoàn, thì nó thoả
+    \begin{equation}
+        \psi(\mathbf{r}) = \psi(\mathbf{r} + \mathbf{U}). 
+    \end{equation}
+    
+    Vector \(\mathbf{U}\) là chu kỳ của sự tuần hoàn này. Trước tiên ta xét trường hợp tuần hoàn theo một trục, ở đây ta chọn trục Ox. 
+
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.9\linewidth]{Problem_2/Figs_P2/sol_Periodic.pdf}
+        \caption{Hệ tuần hoàn}
+        \label{fig:sol_periodic}
+    \end{figure}
+    
+    Ta lúc này viết được
+    \begin{equation}
+    \notag
+        \psi(x) = \psi(x+L) = \psi(x+2L) = ... = \psi(x+nL).
+    \end{equation}
+    Một cách tổng quát với trường hợp 3 chiều, ta lúc này viết được vector \(\mathbf{U}\)
+    \begin{equation}
+        \mathbf{U} = 
+        \left(
+        \begin{matrix}
+            n_x L \\
+            n_y L \\
+            n_z L
+        \end{matrix}
+        \right) = 
+        \left(
+        \begin{matrix}
+            n_x  \\
+            n_y  \\
+            n_z 
+        \end{matrix}
+        \right) L.
+    \end{equation}
+    Ta xét tính tuần hoàn của hệ hộp \(L \times L \times L\), tại điểm \((-\frac{L}{2},0,0)\) và điểm \((\frac{L}{2},0,0)\).
+    \begin{equation}
+        \exp{\left(\displaystyle -i k_x \frac{L}{2}\right)} = \exp{\left(\displaystyle i k_x \frac{L}{2}\right)}.
+    \end{equation}
+    Có thể sử dụng hệ thức Euler để tiếp tục giải quyết, ta thu được
+    \begin{equation}
+        k_x = \frac{2\pi n_x}{L}.
+    \end{equation}
+    Ta làm tương tự với các trục khác.
+    \vspace{2mm}
+
+    \textbf{b)}
+    \vspace{2mm}
+
+    Khoảng cách giữa hai trạng thái bất kì đơn giản chỉ cần xét 
+    \begin{equation*}
+        k_x(n_x) - k_x(m_x) = \frac{2\pi (n_x - m_x)}{L}. 
+    \end{equation*}
+    Vậy khoảng cách giữa hai trạng thái liền kề là
+    \begin{equation}
+        d = \frac{2\pi}{L}.
+    \end{equation}
+
+    %hình 2
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.7\linewidth]{Problem_2/Figs_P2/sol_unitcell.pdf}
+        \caption{Chọn ô cơ sở cho 1 trạng thái.}
+        \label{fig:sol_unitcell}
+    \end{figure}
+
+    Trong không gian vector \(\mathbf{k}\), ta tìm thể tích \(V_1\) để luôn luôn chứa đúng 1. Ta có hai cách để tìm, như hình \ref{fig:sol_unitcell}. Trước tiên, ta tính toán cho trường hợp 2 chiều, trường hợp 3 chiều hoàn toàn tương tự. Với trường hợp 2 chiều, ta sẽ đi tìm diện tích \(S_1\) thay vì thể tích.
+    \begin{equation}
+        S_1 = \left( \frac{2 \pi}{L} \right)^2 = \frac{\text{Diện tích}}{\text{Số trạng thái}}.
+    \end{equation}
+    %hình 3
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=0.5\linewidth]{Problem_2/Figs_P2/sol_densityofstate.pdf}
+        \caption{\(\mathrm{d}S_\mathbf{k} \) bao lấy những trạng thái. }
+        \label{fig:sol_densityofstate}
+    \end{figure}
+    Nếu ta chọn một diện tích \(\mathrm{d}S_{\mathbf{k}} = k \mathrm{d}k \mathrm{d}\theta \), ta sẽ tính được số trạng thái mà \(\mathrm{d}S\) bao lấy.
+    \begin{equation}
+    \notag
+        \mathrm{d}N = 2 \frac{\mathrm{d}S_{\mathbf{k}}}{S_1} = 2  \left(\frac{L}{2 \pi}\right)^2 k \mathrm{d}k \mathrm{d}\theta.
+    \end{equation}
+    Số "\(2\)" ở đây ý nói "với một mức năng lượng, tồn tại hai electron". Như vậy, ta tính được thể tích chứa đúng 1 trạng thái và số trạng thái mà vi phân thể tích \(\mathrm{d}V_{\mathbf{k}}\) chứa.
+    \begin{equation}
+        V_1 = \left( \frac{2 \pi}{L} \right)^3 \ \ \text{và} \ \ \mathrm{d}N = 2\left(\frac{L}{2 \pi}\right)^3 (4\pi k^2 \mathrm{d}k) = \frac{L^3}{\pi^2} (k^2 \mathrm{d}k).
+    \end{equation}
+    Hệ thức liên hệ giữa số \(k\) và năng lượng là 
+    \begin{equation}
+        E = \frac{\hbar^2 k^2}{2m}.
+    \end{equation}
+    Thay vì tính theo biến vector sóng \(k\) ta đổi sang biến \(E\)
+    \begin{equation}
+    \notag
+        \mathrm{d}N =  \frac{L^3}{\pi^2} k^2 \mathrm{d}k = \frac{L^3}{\pi^2} \left(\frac{2m}{\hbar^2} \right)^{3/2} \sqrt{E} \mathrm{d}E.
+    \end{equation}
+    Vậy hàm mật độ trạng thái là 
+    \begin{equation}
+        g(E) =  \frac{L^3}{\pi^2} \left(\frac{\sqrt{2} m^{3/2}}{\hbar^2} \right) \sqrt{E}.
+    \end{equation}
+    \textbf{c)}
+    \vspace{2mm}
+
+    Ta ngay lập tức suy ra được \(g(k)\)
+    \begin{equation}
+        g(k) = \frac{L^3}{\pi^2} k^2.
+    \end{equation}
+    Ta có hệ thức động năng
+    \begin{equation}
+        E = \frac12 m v^2.
+    \end{equation}
+    Làm tương tự ta có 
+    \begin{equation}
+        g(v) =  \left(\frac{mL}{\hbar}\right)^3 \frac{v^2}{\pi^2}.
+    \end{equation}
+    \item \textbf{a)}
+    \vspace{2mm}
+
+    Với mức năng lượng \(\Big[E, E + \mathrm{d}E \Big]\), ta sẽ đếm được \(\mathrm{d}N\) hạt (như ở phần \textbf{i.} chúng ta vừa làm). Nhưng thực tế, chỉ có một phần trong \(\mathrm{d}N\) hạt có mức năng lượng \(\Big[E, E + \mathrm{d}E \Big]\). Lý do thực sự là do mật độ của hạt đủ lớn hoặc nhiệt độ hạt đủ lớn. Lúc này các quy luật thống kê sẽ bị thêm chi phối của các quy tắc lượng tử.
+    \vspace{2mm}
+
+    Các hạt electron là hạt Fermion (tuân theo phân bố Fermi-Dirac) sẽ tồn tại dựa trên nguyên lý loại trừ Pauli \textit{"Với một mức năng lượng, chỉ cho phép tồn tại nhiều nhất 2 hạt"}. Có thêm một phân bố lượng tử nữa là của hạt Boson (tuân theo phân bố Bose-Einstein), các hạt Boson có thể \textit{tồn tại vô hạn} các hạt ở cùng một mức năng lượng. Ví dụ của hạt Boson là photon ánh sáng.
+    \vspace{2mm}
+
+    Quay lại với bài toán, ta có thể tính được mật độ số hạt có mức năng lượng \(\Big[E, E + \mathrm{d}E \Big]\) như sau
+    \begin{equation}
+        \mathrm{d} n(E) = \frac{f_{FD} \  \mathrm{d}N}{L^3} = \frac{\displaystyle \frac{1}{\pi^2} \frac{\sqrt{2}m^{3/2}}{\hbar^2}}{1 + \exp{\displaystyle \left[\frac{E - E_F}{k_bT} \right]}}  \sqrt{E} \mathrm{d}E
+    \end{equation}
+    \textbf{b)}
+    \vspace{2mm}
+
+    Mật độ dòng được tính như sau, ta vẫn có thể dùng \(n(k)\) hoặc \(n(E)\) tuỳ theo sở thích.
+    \begin{equation}
+        j_x =  \int e v_x \mathrm{d} n(v) .
+    \end{equation}
+    Lưu ý, ta có thể sử dụng xấp xỉ \(E \ll E_F\)
+    \begin{equation}
+        f_{FD} = \frac{1}{1 + \exp{\displaystyle \left[\frac{E - E_F}{k_bT}  \right]}} \simeq \exp{\displaystyle \left[-\frac{E - E_F}{k_bT}  \right]}.
+    \end{equation}
+    Ta có thể tính được \(n(v)\) 
+    \begin{equation}
+        \mathrm{d} n(v) =  \frac{f_{FD} \ dN}{L^3} = \left(\frac{m}{\hbar}\right)^3 \exp{\displaystyle \left[-\frac{\frac12 m v^2 - E_F}{k_bT}  \right]} \frac{1}{\pi^2} v^2 \mathrm{d}v. 
+    \end{equation}
+    Từ đây lắp vô công thức mật độ dòng \(j_x\)
+    \begin{equation}
+        \notag
+        j_x = \frac{e}{\pi^2} \left(\frac{m}{\hbar}\right)^3 \int v_x  \exp{\displaystyle \left[-\frac{\frac12 m v^2 - E_F}{k_bT}  \right]}  v^2 \mathrm{d}v
+    \end{equation}
+    Để thuận tiện cho việc tích phân, ta đổi hệ toạ độ cầu sang hệ toạ độ Descartes. 
+    \begin{equation*}
+        4 \pi v^2 \mathrm{d}v = \mathrm{d} v_x \mathrm{d} v_y \mathrm{d} v_z.
+    \end{equation*}
+    Vậy, lúc này ta có thể tách \(j_x\) thành 3 tích phân
+    \begin{equation}
+    \begin{split}
+        j_x = \frac{e}{4\pi^3} \left(\frac{m}{\hbar}\right)^3  \exp\left[\frac{E_F}{k_bT}\right] 
+        \int_{v_0}^{\infty} v_x  &\exp{\displaystyle \left[-\frac{ m v_x^2 }{2k_bT}  \right]} \mathrm{d} v_x \\ \\ &\int_{-\infty}^{\infty }  \exp{\displaystyle \left[-\frac{ m v_y^2 }{2k_bT}  \right]} \mathrm{d} v_y \int_{-\infty}^{\infty }   \exp{\displaystyle \left[-\frac{ m v_z^2 }{2k_bT}  \right]} \mathrm{d} v_z.
+    \end{split}
+    \end{equation}
+    Ở đây, \(v_0\) là vận tốc tối thiểu để vật có thể thẳng được thế năng giảm cầm của mạng tinh thể; \(A\) là công thoát tương ứng.
+    \begin{equation}
+        \begin{split}
+            I_1 &= \int_{v_0}^{\infty} v_x  \exp{\displaystyle \left[-\frac{ m v_x^2 }{2k_bT}  \right]} \mathrm{d} v_x =  \frac{k_bT}{m} \exp \left[-\frac{m v_0^2}{2k_bT}\right] = \frac{k_bT}{m} \exp \left[-\frac{A}{k_bT}\right] \\
+            I_2 &= \int_{-\infty}^{\infty }  \exp{\displaystyle \left[-\frac{ m v_y^2 }{2k_bT}  \right]} \mathrm{d} v_y = \sqrt{\frac{2 \pi k_bT}{m}}\\
+            I_3 &= \int_{-\infty}^{\infty }   \exp{\displaystyle \left[-\frac{ m v_z^2 }{2k_bT}  \right]} \mathrm{d} v_z = \sqrt{\frac{2 \pi k_bT}{m}}.
+        \end{split}
+    \end{equation}
+    Vậy, ta tính được mật độ dòng là 
+    \begin{equation}
+        j_x = \frac{emk^2T^2}{2 \pi^2 \hbar^3} \exp\left[-\frac{A-E_F}{k_bT}\right].
+    \end{equation}
+\end{enumerate}
+\textbf{2.}
+\begin{enumerate}[label = \textbf{\roman*.}]
+    \item Với các hạt chuyển động song song với tấm vật liệu, lúc này chúng chỉ có 2 thành phần vận tốc. Tương ứng với không gian \(\mathbf{k_p}\) là một mặt phẳng (giống hệt hình \ref{fig:kim loại}b). Ta tính được mật độ trạng thái \(g(k_p)\)
+    \begin{equation}
+    \notag
+        g(k_p) = \frac{L^2}{\pi}k_p \mathrm{d}k_p
+    \end{equation}
+    Từ đây tìm được mật độ trạng thái \(g(E_p)\)
+    \begin{equation}
+        g(E_p) =  \frac{L^2}{\pi} \frac{E_p}{(\hbar v_F)^2} \mathrm{d} E_p.
+    \end{equation}
+    \item Nhưng lúc này ta chưa thể nhân thêm phân bố \(f_{FD}\) và nhận định rằng nó là \(n(E_p)\) được. Lưu ý rằng \(f_{FD}\) chỉ biểu diễn cho hạt có mức năng lượng \(E\) chứ không phải \(E_p\).
+    \vspace{2mm}
+    
+    Những hạt có mức năng lượng \(E\) là những hạt, vừa có mức năng lượng \(E_x\) và \(E_p\). Ta vẫn đi xét một vi phân thể tích trong không gian \(\mathbf{k}\). Để thuận tiện trong việc loại trừ biến \(k_y, k_z\), ta sử dụng hệ toạ độ trụ, với chiều cao tương ứng với trục \(Ox\).
+    \begin{equation}
+        \mathrm{d} V_\mathbf{k} = \mathrm{d} k_x \mathrm{d} k_y \mathrm{d} k_z = 2 \pi k_p \mathrm{d}k_p \mathrm{d}k_x.
+    \end{equation}
+    Tổng trạng thái được thể tích \(\mathrm{d} V_\mathbf{k}\) bao lấy là
+    \begin{equation}
+        \mathrm{d} N = 2 \frac{2 \pi k_p \mathrm{d}k_p \mathrm{d}k_x}{\displaystyle  \left(\frac{2\pi}{L}\right)^2 }
+    \end{equation}
+    Ta thấy rằng, ở đây tại chỉ xét ô cơ sở 2D trên mặt phẳng \(Oyz\). Nhưng lại không hề sử dụng ô cơ sở 3D giống như phần 1. Để giải thích tại sao \(\mathrm{d}V_\mathbf{k}\) không liên quan tới sự phân bố trạng thái theo trục \(Ox\), ta giả sử lớp GSL có độ dày \(h \lll L\). Vậy khoảng cách giữa hai trạng thái liên tiếp dọc theo \(Ox\) là
+    \begin{equation*}
+        d_x = \frac{2\pi}{h}\ \xrightarrow{\ h \rightarrow 0 \ } \infty.
+    \end{equation*}
+    Như thế khoảng cách giữa 2 trạng thái trên trục \(Ox\) là rất lớn. Nên, ta không thể xấp xỉ thành từ rời rạc các trạng thái thành liên tục được. Ta hay nhận định rằng, để có thể xấp xỉ thành hệ liên tục thì độ dài vi phân \(\mathrm{d}k_x\) vẫn phải lớn hơn rất nhiều khoảng cách giữa những trạng thái (tương tự đối với lại các hệ liên tục khác như điện tích khối,...). 
+    \vspace{2mm}
+    
+    Lúc này trong không gian \(\mathbf{k}\) ta chọn một ô \(\mathrm{d}V_\mathbf{k}\) bất kì. Theo hình \ref{fig:GSL k-space} thì \(d_x\) càng tăng, số trạng thái nằm trong \(\mathrm{d} V_\mathbf{k}\) càng giảm. Đến một giá trị nhất định, vi phân thể tích chỉ có thể bao lấy được những trạng thái thuộc mặt phẳng \(Oyz\). 
+    \begin{figure}[!htb]
+        \centering
+        \includegraphics[width=1.07\linewidth]{Problem_2/Figs_P2/sol_GSL k-space.pdf}
+        \caption{Không gian \(\mathbf{k}\) của GSL với \(d_x\) tăng dần.}
+        \label{fig:GSL k-space}
+    \end{figure}
+    
+    Từ đây, ta có thể tính được mật độ những hạt có vector sóng \(k_x, k_y, k_z\)  là 
+    \begin{equation}
+        \mathrm{d} n(k_x,k_p) = \frac{f_{FD} \ \mathrm{d}N}{L^2} = f_{FD} \frac{ k_p \mathrm{d}k_p \mathrm{d}k_x}{ \pi}. 
+    \end{equation}
+    Từ đây, ta sẽ tính toán được mật độ dòng \(j_x\)
+    \begin{equation}
+    \notag
+    \begin{split}
+        j_x &= \int e v_x \mathrm{d} n(k_x,k_p) \\
+        &= \int e v_x \exp{\displaystyle \left[-\frac{E - E_F}{k_bT}  \right]} \frac{ k_p \mathrm{d}k_p \mathrm{d}k_x}{ \pi^2} \\
+        &= \frac{e}{\pi} \exp{\left[\frac{E_F}{k_b T}\right]} \int v_x \mathrm{d}k_x  \int \exp{\left[-\frac{E}{k_b T}\right]} k_p \mathrm{d}k_p . \\
+        &= \frac{e}{\pi} \exp{\left[\frac{E_F}{k_b T}\right]} \int_{A}^{\infty} \frac{1}{\hbar} \mathrm{d} E_x \int_{0}^{\infty}  \exp{\left[-\frac{E}{k_b T}\right]}  \frac{E_p}{(\hbar v_F)^2} \mathrm{d} E_p \\
+        &= \frac{e}{\pi \hbar^3 v_F^2} \exp{\left[\frac{E_F}{k_b T}\right]} \int_{A}^{\infty} \exp{\left[-\frac{E_x}{k_b T}\right]} \mathrm{d} E_x \int_{0}^\infty \exp{\left[-\frac{E_p}{k_b T}\right]} E_p \mathrm{d}E_p.
+    \end{split}
+    \end{equation}
+    Ta tính cách tích phân được kết quả như sau
+    \begin{equation*}
+        \begin{split}
+        I_1 &= \int_{A}^{\infty} \exp{\left[-\frac{E_x}{k_b T}\right]} \mathrm{d} E_x = k_b T \exp{\left[-\frac{A}{k_b T}\right]}.\\
+        I_2 &= \int_{0}^\infty \exp{\left[-\frac{E_p}{k_b T}\right]} E_p \mathrm{d}E_p = k_b^2 T^2.
+        \end{split}
+    \end{equation*}
+    Vậy mật độ dòng là
+    \begin{equation}
+        j_x =  \frac{ek_b^3 T^3}{\pi \hbar^3 v_F^2} \exp{\left[-\frac{A-E_F}{k_b T}\right]}.
+    \end{equation}
+\end{enumerate}
+
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{Marjan Grilj} Marjan Grilj. "Thermionic emission". University of Ljubljana (2008).
+\bibitem{Shi-Jun Liang} Shi-Jun Liang and L. K. Ang. "Electron Thermionic Emission from Graphene and a Thermionic Energy Converter." PHYSICAL REVIEW APPLIED 3, 014002 (2015).
+\end{thebibliography}

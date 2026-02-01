@@ -1,0 +1,34 @@
+\textbf{Kỹ thuật đặc tính hóa hằng số điện môi và độ từ thẩm của vật liệu}
+
+Các cấu trúc vật liệu nhân tạo đã mang đến các đặc trưng về hằng số điện môi và độ từ thẩm đặc biệt tùy theo ý muốn của kỹ sư thiết kế. Ta có thể thiết kế một hệ truyền dẫn sóng phát một sóng tới tấm vật liệu và đo hệ số truyền qua và hệ số phản xạ của sóng để tính toán, đặc tính hóa các tính chất của vật liệu như chiết suất, hằng số điện môi, độ từ thẩm\footnote{Trong bài toán này, ta hiểu rằng phần ảo của hằng số điện môi, độ từ thẩm, chiết suất đặc trưng cho đến thành phần suy hao trong quá trình truyền sóng. Vì vậy, ta sẽ không cần trực tiếp sử dụng đến điện trở suất, độ dẫn điện, và các thông số liên quan đến suy hao khác.}.
+
+Xét một hệ truyền sóng như hình \ref{fig:Wave_scattering}, khi ta truyền một sóng tới \(A_1\), qua tấm vật liệu, ta nhận được một sóng phản xạ \(B_1\) và sóng truyền qua \(B_2\) (\(A_1\), \(B_1\), và \(B_2\) có thể là các số phức, chứa thông tin về pha và biên độ của sóng). Ta lần lượt đo các tỷ hệ số phản xạ \(S_{11} = B_1/A_1 \) và hệ số truyền qua \(S_{21} = B_2/A_1 \) bằng máy phân tích mạng vector.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Problem_10/Figs_P10/Wave_scattering.pdf}
+    \caption{Sóng tới, sóng phản xạ và sóng truyền qua một tấm vật liệu.}
+    \label{fig:Wave_scattering}
+\end{figure}
+
+\textbf{1.} Khi một sóng truyền từ không khí vào tấm vật liệu, một phần của sóng bị phản xạ lại với hệ số \(-\Gamma\) (Dấu trừ thể hiện cho sự đảo pha trong phản xạ), và ngược lại, khi một sóng truyền từ trong tấm vật liệu ra ngoài không khí, một phần sóng bị phản xạ với hệ số \(\Gamma\). Gọi \(T\) là hệ số truyền khi sóng đi được một đoạn \(d\) trong tấm vật liệu\footnote{Hệ số \(T\) là một số phức, thể hiện cả độ suy hao và độ dịch pha của sóng khi truyền.}. 
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{Problem_10/Figs_P10/Reflection_Transmission_coefficient.pdf}
+    \caption{\textbf{(a)} Hệ số phản xạ \(-\Gamma\) của sóng truyền từ không khí vào tấm vật liệu. \textbf{(b)} Hệ số truyền \(T\) khi sóng truyền một đoạn dài \(d\) trong tấm vật liệu.}
+    \label{fig:Reflection_Transmission_coefficient}
+\end{figure}
+
+Hãy tính các hệ số \(\Gamma\) và \(T\) theo các bộ số \(S_{11}\) và \(S_{21}\) đo được.
+
+\textbf{2.} Gọi \(z = \sqrt{\mu/\varepsilon}\) là trở kháng sóng chuẩn hóa của vật liệu. Chứng minh rằng, khi sóng tới vuông góc với mặt ngăn cách giữa hai môi trường thì hệ số phản xạ bề mặt \(\Gamma\) được tính bằng công thức
+\begin{equation}
+    \Gamma = \dfrac{z-1}{z+1}.
+\end{equation}
+
+\textbf{3.} Xét sóng truyền với tần số \(f\) truyền trong tấm vật liệu độ dày \(d\). Ta có thể tìm được chiết suất \(n\) khi đã biết hệ số truyền \(T\) hay không?
+
+\textbf{4.} Giả sử tấm vật liệu có độ dày \(d\) rất mỏng so với bước sóng của sóng truyền trong tấm vật liệu. Tìm hằng số điện môi và độ từ thẩm của tấm vật liệu. \vspace{2mm}
+
+\textit{Tính toán cụ thể cho phần \textbf{4.} với tấm vật liệu có độ dày \(d = \SI{0.8}{mm}\), tại tần số \( f = \SI{2.45}{GHz} \), các hệ số tán xạ \(S\) đo được từ máy lần lượt là \(S_{11} = -0.005473 + 0.054204 i \) và \(S_{21} = 0.993701 + 0.095278 i\). Làm tròn kết quả đến 3 chữ số có nghĩa.}

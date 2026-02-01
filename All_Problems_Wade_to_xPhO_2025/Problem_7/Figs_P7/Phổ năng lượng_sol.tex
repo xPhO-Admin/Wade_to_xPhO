@@ -1,0 +1,264 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\usepackage{pgf,tikz}
+\usepackage[active,tightpage]{preview}
+\usepackage{pgfplots}
+\usepackage[OT1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{helvet,sfmath}
+
+\usetikzlibrary{intersections}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5pt}
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+\tikzset{>=stealth',inner sep=0pt,outer sep=2pt}
+
+\begin{document}
+%a=1 E_0=2 t=2 
+\def\N{11}
+\def\P{3.1415}
+\def\dk{2.855909}
+\Large
+
+\begin{tikzpicture}[scale=0.65]
+\draw[->,thick] (-5*\P,0) -- ({5*\P+1},0) coordinate (x axis) node[below] {$x$};
+\draw[->,thick] (0,-0.5) -- (0,20) coordinate (y axis) node[left] {$y$};
+\draw[blue,dashed,smooth,samples=100,domain=-pi:pi] plot(5*\x,{10-10*cos(\x r)});
+\draw[-|,thick] (0,0) -- (-5*\dk,0) coordinate (x axis) node[below] {\(-5\delta k\)};
+\draw[-|,thick] (0,0) -- (-4*\dk,0) coordinate (x axis) node[below] {\(-4\delta k\)};
+\draw[-|,thick] (0,0) -- (-3*\dk,0) coordinate (x axis) node[below] {\(-3\delta k\)};
+\draw[-|,thick] (0,0) -- (-2*\dk,0) coordinate (x axis) node[below] {\(-2\delta k\)};
+\draw[-|,thick] (0,0) -- (-1*\dk,0) coordinate (x axis) node[below] {\(-\delta k\)};
+\draw[-|,thick] (0,0) -- (\dk,0) coordinate (x axis) node[below] {\(\delta k\)};
+\draw[-|,thick] (0,0) -- ({2*\dk},0) coordinate (x axis) node[below] {\(2\delta k\)};
+\draw[-|,thick] (0,0) -- ({3*\dk},0) coordinate (x axis) node[below] {\(3\delta k\)};
+\draw[-|,thick] (0,0) -- ({4*\dk},0) coordinate (x axis) node[below] {\(4\delta k\)};
+\draw[-|,thick] (0,0) -- ({5*\dk},0) coordinate (x axis) node[below] {\(5\delta k\)};
+
+\draw[fill=red] (-5*\dk,{10 - 10*cos(-10*\dk r)}) circle (10pt);
+\draw[fill=red] (-4*\dk,{10 - 10*cos(-8*\dk r)}) circle (10pt);
+\draw[fill=red] (-3*\dk,{10 - 10*cos(-6*\dk r)}) circle (10pt);
+\draw[fill=red] (-2*\dk,{10 - 10*cos(-4*\dk r)}) circle (10pt);
+\draw[fill=red] (-1*\dk,{10 - 10*cos(-2*\dk r)}) circle (10pt);
+\draw[fill=red] (0,0) circle (10pt);
+\draw[fill=red] (\dk,{10 - 10*cos(2*\dk r)}) circle (10pt);
+\draw[fill=red] (2*\dk,{10 - 10*cos(4*\dk r)}) circle (10pt);
+\draw[fill=red] (3*\dk,{10 - 10*cos(6*\dk r)}) circle (10pt);
+\draw[fill=red] (4*\dk,{10 - 10*cos(8*\dk r)}) circle (10pt);
+\draw[fill=red] (5*\dk,{10 - 10*cos(10*\dk r)}) circle (10pt);
+
+\draw[red] ({\dk-0.5},{1+10 - 10*cos(2*\dk r)}) node {\(2e\)};
+\draw[red] ({2*\dk-0.5},{1+10 - 10*cos(4*\dk r)}) node {\(2e\)};
+\draw[red] ({3*\dk-0.5},{1+10 - 10*cos(6*\dk r)}) node {\(2e\)};
+\draw[red] ({4*\dk-0.5},{1+10 - 10*cos(8*\dk r)}) node {\(2e\)};
+\draw[red] ({5*\dk-0.5},{1+10 - 10*cos(10*\dk r)}) node {\(2e\)};
+\draw[red] ({-1*\dk+0.5},{1+10 - 10*cos(-2*\dk r)}) node {\(2e\)};
+\draw[red] ({-2*\dk+0.5},{1+10 - 10*cos(-4*\dk r)}) node {\(2e\)};
+\draw[red] ({-3*\dk+0.5},{1+10 - 10*cos(-6*\dk r)}) node {\(2e\)};
+\draw[red] ({-4*\dk+0.5},{1+10 - 10*cos(-8*\dk r)}) node {\(2e\)};
+\draw[red] ({-5*\dk+0.5},{1+10 - 10*cos(-10*\dk r)}) node {\(2e\)};
+\draw[red] (0,1) node {\(2e\)};
+
+
+
+\end{tikzpicture}
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%% Đồ thị phổ năng lượng %%%%%%%%%%%%%%%%%%%%%
+
+\draw[->,thick] (-5*\P,0) -- ({5*\P+1},0) coordinate (x axis) node[below] {$x$};
+\draw[->,thick] (0,-0.5) -- (0,20) coordinate (y axis) node[left] {$y$};
+\draw[blue,dashed,smooth,samples=100,domain=-pi:pi] plot(5*\x,{10-10*cos(\x r)});
+\draw[-|,thick] (0,0) -- (-5*\dk,0) coordinate (x axis) node[below] {\(-5\delta k\)};
+\draw[-|,thick] (0,0) -- (-4*\dk,0) coordinate (x axis) node[below] {\(-4\delta k\)};
+\draw[-|,thick] (0,0) -- (-3*\dk,0) coordinate (x axis) node[below] {\(-3\delta k\)};
+\draw[-|,thick] (0,0) -- (-2*\dk,0) coordinate (x axis) node[below] {\(-2\delta k\)};
+\draw[-|,thick] (0,0) -- (-1*\dk,0) coordinate (x axis) node[below] {\(-\delta k\)};
+\draw[-|,thick] (0,0) -- (\dk,0) coordinate (x axis) node[below] {\(\delta k\)};
+\draw[-|,thick] (0,0) -- ({2*\dk},0) coordinate (x axis) node[below] {\(2\delta k\)};
+\draw[-|,thick] (0,0) -- ({3*\dk},0) coordinate (x axis) node[below] {\(3\delta k\)};
+\draw[-|,thick] (0,0) -- ({4*\dk},0) coordinate (x axis) node[below] {\(4\delta k\)};
+\draw[-|,thick] (0,0) -- ({5*\dk},0) coordinate (x axis) node[below] {\(5\delta k\)};
+
+\draw[fill=red] (-5*\dk,{10 - 10*cos(-10*\dk r)}) circle (10pt);
+\draw[fill=red] (-4*\dk,{10 - 10*cos(-8*\dk r)}) circle (10pt);
+\draw[fill=red] (-3*\dk,{10 - 10*cos(-6*\dk r)}) circle (10pt);
+\draw[fill=red] (-2*\dk,{10 - 10*cos(-4*\dk r)}) circle (10pt);
+\draw[fill=red] (-1*\dk,{10 - 10*cos(-2*\dk r)}) circle (10pt);
+\draw[fill=red] (0,0) circle (10pt);
+\draw[fill=red] (\dk,{10 - 10*cos(2*\dk r)}) circle (10pt);
+\draw[fill=red] (2*\dk,{10 - 10*cos(4*\dk r)}) circle (10pt);
+\draw[fill=red] (3*\dk,{10 - 10*cos(6*\dk r)}) circle (10pt);
+\draw[fill=red] (4*\dk,{10 - 10*cos(8*\dk r)}) circle (10pt);
+\draw[fill=red] (5*\dk,{10 - 10*cos(10*\dk r)}) circle (10pt);
+
+%%%%%%%%%%%%%%%%%%%%% Lắp đầy electron %%%%%%%%%%%%%%%%%%%%%
+
+\draw[->,thick] (-5*\P,0) -- ({5*\P+1},0) coordinate (x axis) node[below] {$x$};
+\draw[->,thick] (0,-0.5) -- (0,20) coordinate (y axis) node[left] {$y$};
+\draw[blue,thick,smooth,samples=100,domain=-pi:pi] plot(5*\x,{10-10*cos(\x r)});
+\draw[-|,thick] (0,0) -- (-5*\dk,0) coordinate (x axis) node[below] {\(-5\delta k\)};
+\draw[-|,thick] (0,0) -- (-4*\dk,0) coordinate (x axis) node[below] {\(-4\delta k\)};
+\draw[-|,thick] (0,0) -- (-3*\dk,0) coordinate (x axis) node[below] {\(-3\delta k\)};
+\draw[-|,thick] (0,0) -- (-2*\dk,0) coordinate (x axis) node[below] {\(-2\delta k\)};
+\draw[-|,thick] (0,0) -- (-1*\dk,0) coordinate (x axis) node[below] {\(-\delta k\)};
+\draw[-|,thick] (0,0) -- (\dk,0) coordinate (x axis) node[below] {\(\delta k\)};
+\draw[-|,thick] (0,0) -- ({2*\dk},0) coordinate (x axis) node[below] {\(2\delta k\)};
+\draw[-|,thick] (0,0) -- ({3*\dk},0) coordinate (x axis) node[below] {\(3\delta k\)};
+\draw[-|,thick] (0,0) -- ({4*\dk},0) coordinate (x axis) node[below] {\(4\delta k\)};
+\draw[-|,thick] (0,0) -- ({5*\dk},0) coordinate (x axis) node[below] {\(5\delta k\)};
+
+
+\draw[fill] (-2*\dk,{10 - 10*cos(-4*\dk r)}) circle (10pt);
+\draw[fill] (-1*\dk,{10 - 10*cos(-2*\dk r)}) circle (10pt);
+\draw[fill] (0,0) circle (10pt);
+\draw[fill] (\dk,{10 - 10*cos(2*\dk r)}) circle (10pt);
+\draw[fill] (2*\dk,{10 - 10*cos(4*\dk r)}) circle (10pt);
+
+
+
+%%%%%%%%%%%%%%%%%%%%% Đồ thị vật liệu cách điện %%%%%%%%%%%%%%%%%%%%%
+\draw[->,thick] (-5*\P,0) -- ({5*\P+1},0) coordinate (x axis) node[below] {$x$};
+\draw[->,thick] (0,-0.5) -- (0,20) coordinate (y axis) node[left] {$y$};
+\draw[blue,thick,smooth,samples=100,domain=-pi:pi] plot(5*\x,{10-10*cos(\x r)});
+\draw[-|,thick] (0,0) -- (-5*\dk,0) coordinate (x axis) node[below] {\(-5\delta k\)};
+\draw[-|,thick] (0,0) -- (-4*\dk,0) coordinate (x axis) node[below] {\(-4\delta k\)};
+\draw[-|,thick] (0,0) -- (-3*\dk,0) coordinate (x axis) node[below] {\(-3\delta k\)};
+\draw[-|,thick] (0,0) -- (-2*\dk,0) coordinate (x axis) node[below] {\(-2\delta k\)};
+\draw[-|,thick] (0,0) -- (-1*\dk,0) coordinate (x axis) node[below] {\(-\delta k\)};
+\draw[-|,thick] (0,0) -- (\dk,0) coordinate (x axis) node[below] {\(\delta k\)};
+\draw[-|,thick] (0,0) -- ({2*\dk},0) coordinate (x axis) node[below] {\(2\delta k\)};
+\draw[-|,thick] (0,0) -- ({3*\dk},0) coordinate (x axis) node[below] {\(3\delta k\)};
+\draw[-|,thick] (0,0) -- ({4*\dk},0) coordinate (x axis) node[below] {\(4\delta k\)};
+\draw[-|,thick] (0,0) -- ({5*\dk},0) coordinate (x axis) node[below] {\(5\delta k\)};
+
+\draw[fill] (-5*\dk,{10 - 10*cos(-10*\dk r)}) circle (10pt);
+\draw[fill] (-4*\dk,{10 - 10*cos(-8*\dk r)}) circle (10pt);
+\draw[fill] (-3*\dk,{10 - 10*cos(-6*\dk r)}) circle (10pt);
+\draw[fill] (-2*\dk,{10 - 10*cos(-4*\dk r)}) circle (10pt);
+\draw[fill] (-1*\dk,{10 - 10*cos(-2*\dk r)}) circle (10pt);
+\draw[fill] (0,0) circle (10pt);
+\draw[fill] (\dk,{10 - 10*cos(2*\dk r)}) circle (10pt);
+\draw[fill] (2*\dk,{10 - 10*cos(4*\dk r)}) circle (10pt);
+\draw[fill] (3*\dk,{10 - 10*cos(6*\dk r)}) circle (10pt);
+\draw[fill] (4*\dk,{10 - 10*cos(8*\dk r)}) circle (10pt);
+\draw[fill] (5*\dk,{10 - 10*cos(10*\dk r)}) circle (10pt);
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%% Đồ thị vật liệu dẫn điện %%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%% Theo chiều dương %%%%%%%%
+
+\draw[->,thick] (-5*\P,0) -- ({5*\P+1},0) coordinate (x axis) node[below] {$x$};
+\draw[->,thick] (0,-0.5) -- (0,20) coordinate (y axis) node[left] {$y$};
+\draw[blue,thick,smooth,samples=100,domain=-pi:pi] plot(5*\x,{10-10*cos(\x r)});
+\draw[-|,thick] (0,0) -- (-5*\dk,0) coordinate (x axis) node[below] {\(-5\delta k\)};
+\draw[-|,thick] (0,0) -- (-4*\dk,0) coordinate (x axis) node[below] {\(-4\delta k\)};
+\draw[-|,thick] (0,0) -- (-3*\dk,0) coordinate (x axis) node[below] {\(-3\delta k\)};
+\draw[-|,thick] (0,0) -- (-2*\dk,0) coordinate (x axis) node[below] {\(-2\delta k\)};
+\draw[-|,thick] (0,0) -- (-1*\dk,0) coordinate (x axis) node[below] {\(-\delta k\)};
+\draw[-|,thick] (0,0) -- (\dk,0) coordinate (x axis) node[below] {\(\delta k\)};
+\draw[-|,thick] (0,0) -- ({2*\dk},0) coordinate (x axis) node[below] {\(2\delta k\)};
+\draw[-|,thick] (0,0) -- ({3*\dk},0) coordinate (x axis) node[below] {\(3\delta k\)};
+\draw[-|,thick] (0,0) -- ({4*\dk},0) coordinate (x axis) node[below] {\(4\delta k\)};
+\draw[-|,thick] (0,0) -- ({5*\dk},0) coordinate (x axis) node[below] {\(5\delta k\)};
+
+\draw[fill] (-1*\dk,{10 - 10*cos(-2*\dk r)}) circle (10pt);
+\draw[fill] (0,0) circle (10pt);
+\draw[fill] (\dk,{10 - 10*cos(2*\dk r)}) circle (10pt);
+\draw[fill] (2*\dk,{10 - 10*cos(4*\dk r)}) circle (10pt);
+\draw[fill] (3*\dk,{10 - 10*cos(6*\dk r)}) circle (10pt);
+
+%%%%%%%% Theo chiều âm %%%%%%%%
+
+\draw[->,thick] (-5*\P,0) -- ({5*\P+1},0) coordinate (x axis) node[below] {$x$};
+\draw[->,thick] (0,-0.5) -- (0,20) coordinate (y axis) node[left] {$y$};
+\draw[blue,thick,smooth,samples=100,domain=-pi:pi] plot(5*\x,{10-10*cos(\x r)});
+\draw[-|,thick] (0,0) -- (-5*\dk,0) coordinate (x axis) node[below] {\(-5\delta k\)};
+\draw[-|,thick] (0,0) -- (-4*\dk,0) coordinate (x axis) node[below] {\(-4\delta k\)};
+\draw[-|,thick] (0,0) -- (-3*\dk,0) coordinate (x axis) node[below] {\(-3\delta k\)};
+\draw[-|,thick] (0,0) -- (-2*\dk,0) coordinate (x axis) node[below] {\(-2\delta k\)};
+\draw[-|,thick] (0,0) -- (-1*\dk,0) coordinate (x axis) node[below] {\(-\delta k\)};
+\draw[-|,thick] (0,0) -- (\dk,0) coordinate (x axis) node[below] {\(\delta k\)};
+\draw[-|,thick] (0,0) -- ({2*\dk},0) coordinate (x axis) node[below] {\(2\delta k\)};
+\draw[-|,thick] (0,0) -- ({3*\dk},0) coordinate (x axis) node[below] {\(3\delta k\)};
+\draw[-|,thick] (0,0) -- ({4*\dk},0) coordinate (x axis) node[below] {\(4\delta k\)};
+\draw[-|,thick] (0,0) -- ({5*\dk},0) coordinate (x axis) node[below] {\(5\delta k\)};
+
+\draw[fill] (-4*\dk,{10 - 10*cos(-8*\dk r)}) circle (10pt);
+\draw[fill] (-3*\dk,{10 - 10*cos(-6*\dk r)}) circle (10pt);
+\draw[fill] (-2*\dk,{10 - 10*cos(-4*\dk r)}) circle (10pt);
+\draw[fill] (-1*\dk,{10 - 10*cos(-2*\dk r)}) circle (10pt);
+\draw[fill] (0,0) circle (10pt);
+\draw[fill] (\dk,{10 - 10*cos(2*\dk r)}) circle (10pt);
+\draw[fill] (2*\dk,{10 - 10*cos(4*\dk r)}) circle (10pt);
+\draw[fill] (3*\dk,{10 - 10*cos(6*\dk r)}) circle (10pt);
+
+%%%%%%%%%%%%%%%%%%%%% Chuyển pha Peierls %%%%%%%%%%%%%%%%%%%%%\
+
+\draw[->,thick] (-5*\P,0) -- ({5*\P+1},0) coordinate (x axis) node[below] {$x$};
+\draw[->,thick] (0,-0.5) -- (0,20) coordinate (y axis) node[left] {$y$};
+\draw[blue,thick,smooth,samples=100,domain=-pi/2:pi/2] plot(5*\x,{4.5-4.5*cos(2*\x r)});
+\draw[blue,thick,smooth,samples=100,domain=pi/2:pi] plot(5*\x,{11+4.5-4.5*cos(2*(\x-pi/2)  r)});
+\draw[blue,thick,smooth,samples=100,domain=-pi:-pi/2] plot(5*\x,{11+4.5-4.5*cos(2*(\x-pi/2)  r)});
+\draw[dashed] ({5*(pi/2)},{4.5-4.5*cos(pi r)}) -- ({5*(pi/2)},{2+4.5-4.5*cos(pi r)});
+\draw[dashed] ({-5*(pi/2)},{4.5-4.5*cos(pi r)}) -- ({-5*(pi/2)},{2+4.5-4.5*cos(pi r)});
+
+\draw[-|,thick] (0,0) -- (-5*\dk,0) coordinate (x axis) node[below] {\(-5\delta k\)};
+\draw[-|,thick] (0,0) -- (-4*\dk,0) coordinate (x axis) node[below] {\(-4\delta k\)};
+\draw[-|,thick] (0,0) -- (-3*\dk,0) coordinate (x axis) node[below] {\(-3\delta k\)};
+\draw[-|,thick] (0,0) -- (-2*\dk,0) coordinate (x axis) node[below] {\(-2\delta k\)};
+\draw[-|,thick] (0,0) -- (-1*\dk,0) coordinate (x axis) node[below] {\(-\delta k\)};
+\draw[-|,thick] (0,0) -- (\dk,0) coordinate (x axis) node[below] {\(\delta k\)};
+\draw[-|,thick] (0,0) -- ({2*\dk},0) coordinate (x axis) node[below] {\(2\delta k\)};
+\draw[-|,thick] (0,0) -- ({3*\dk},0) coordinate (x axis) node[below] {\(3\delta k\)};
+\draw[-|,thick] (0,0) -- ({4*\dk},0) coordinate (x axis) node[below] {\(4\delta k\)};
+\draw[-|,thick] (0,0) -- ({5*\dk},0) coordinate (x axis) node[below] {\(5\delta k\)};
+
+\draw[fill] (-2*\dk,{4.5 - 4.5*cos(-8*\dk r)}) circle (10pt);
+\draw[fill] (-1*\dk,{4.5 - 4.5*cos(-4*\dk r)}) circle (10pt);
+\draw[fill] (0,0) circle (10pt);
+\draw[fill] (\dk,{4.5 - 4.5*cos(4*\dk r)}) circle (10pt);
+\draw[fill] (2*\dk,{4.5 - 4.5*cos(8*\dk r)}) circle (10pt);
+
+\draw ({3*\dk}, {4.5-4.5*cos(pi r) + 1.5}) node [anchor=north west][inner sep=0.75pt]    {\Huge $\Delta$};
+
+%%%%%%%%%%%%%%%%%%%%% Phổ năng lượng mới %%%%%%%%%%%%%%%%%%%%%
+
+\fill[blue!50] ({-5*(pi/2) - 1},0) rectangle ({-5*(pi/2) },19);
+\fill[yellow!60] ({-5*(pi/2)},0) rectangle ({-5*(pi/2) + 1},19);
+\fill[yellow!60] ({5*(pi/2)},0) rectangle ({5*(pi/2) - 1},19);
+\fill[blue!50] ({5*(pi/2)},0) rectangle ({5*(pi/2) + 1},19);
+
+\fill[yellow!20] ({-5*(pi/2)+1},0) rectangle ({5*(pi/2) - 1},19);
+\fill[blue!20] ({-5*pi},0) rectangle ({{-5*(pi/2) - 1}},19);
+\fill[blue!20] ({5*(pi/2) + 1},0) rectangle ({{5*(pi) }},19);
+
+
+\draw[->,thick] (-5*\P,0) -- ({5*\P+1},0) coordinate (x axis) node[below] {$x$};
+\draw[->,thick] (0,-0.5) -- (0,20) coordinate (y axis) node[left] {$y$};
+\draw[blue,thick,smooth,samples=100,domain=-pi/2:pi/2] plot(5*\x,{4.5-4.5*cos(2*\x r)});
+\draw[blue,thick,smooth,samples=100,domain=pi/2:pi] plot(5*\x,{11+4.5-4.5*cos(2*(\x-pi/2)  r)});
+\draw[blue,thick,smooth,samples=100,domain=-pi:-pi/2] plot(5*\x,{11+4.5-4.5*cos(2*(\x-pi/2)  r)});
+\draw[dashed, red, thick] ({5*(pi/2)},{4.5-4.5*cos(pi r)}) -- ({5*(pi/2)},{2+4.5-4.5*cos(pi r)});
+\draw[dashed, red, thick] ({-5*(pi/2)},{4.5-4.5*cos(pi r)}) -- ({-5*(pi/2)},{2+4.5-4.5*cos(pi r)});
+\draw[dashed, red] ({-5*(pi/2) - 1},0) -- ({-5*(pi/2) - 1},19);
+\draw[dashed, red] ({-5*(pi/2) + 1},0) -- ({-5*(pi/2) + 1},19);
+\draw[dashed, red] ({5*(pi/2) - 1},0) -- ({5*(pi/2) - 1},19);
+\draw[dashed, red] ({5*(pi/2) + 1},0) -- ({5*(pi/2) + 1},19);
+
+\draw[-|,thick] (0,0) -- ({5*(pi/2) - 1},0); \draw ({5*(pi/2) - 1},-1.0)  node {\(k_b - \varepsilon \)}; \draw ({5*(pi/2) + 1},-1.0)  node {\(k_b + \varepsilon \)}; \draw ({5*(pi/2)},-0.5)  node {\(k_b \)};
+
+
+\draw[fill] (-2*\dk,{4.5 - 4.5*cos(-8*\dk r)}) circle (10pt);
+\draw[fill] (-1*\dk,{4.5 - 4.5*cos(-4*\dk r)}) circle (10pt);
+\draw[fill] (0,0) circle (10pt);
+\draw[fill] (\dk,{4.5 - 4.5*cos(4*\dk r)}) circle (10pt);
+\draw[fill] (2*\dk,{4.5 - 4.5*cos(8*\dk r)}) circle (10pt);
+

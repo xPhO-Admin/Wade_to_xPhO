@@ -1,0 +1,71 @@
+a. Ta xét một lớp vỏ hình trụ ban đầu có bề dày vi phân $d R$, bán kính $R$, biến dạng thành một lớp vỏ cuối cùng có bề dày $d r$, bán kính $r$. Vì cao su là chất bất nén, thể tích vi phân $d V$ của ống trụ mỏng này được bảo toàn trong quá trình biến dạng:
+\begin{equation}
+\mathrm{d} V=(2 \pi R) H \mathrm{d} R=(2 \pi r) h \mathrm{d} r .
+\label{1}
+\end{equation}
+Tích phân hai vế, ta có:
+\begin{equation}
+H \int_0^{R} \tilde{R} \mathrm{d} \tilde{R}=h \int_0^{r} \tilde{r} \mathrm{d} \tilde{r} \Rightarrow H R^2=hr^2 .
+\label{2}
+\end{equation}
+Từ phương trình trên, dễ dàng suy ra:
+\begin{equation}
+r_o=R_0\sqrt{\dfrac{H}{h}} .
+\end{equation}
+Biểu thức trên cho ta thấy rằng: đứng như dự đoán, nếu miếng cao su dài ra khi bị xoắn, nó phải trở nên mảnh hơn; ngược lại, nếu ngắn đi, nó phải phình to ra.
+
+b. Ta trải phẳng lớp vỏ ở ý a. Kích thước của các lớp này trước và sau khi biến dạng là:
+\begin{equation}
+\left\{\begin{array}{l}A=2 \pi R \\ B=H \\ C= \mathrm{d} R\end{array} \quad\left\{\begin{array}{l}a=2 \pi r \\ b=\sqrt{h^2+(r \theta)^2} \\ c= \mathrm{d} r .\end{array}\right.\right.
+\label{4}
+\end{equation}
+
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.8\linewidth]{Problem_6/Figs_P6/Fig_B6_sol.pdf}
+    \caption{}
+    \label{fig:B6_sol}
+\end{figure}
+
+Từ phương trình (\ref{*}) và (\ref{4}), năng lượng đàn hồi của lớp vỏ này là:
+\begin{equation}
+    dU=\frac{\mu}{2} \left[ \frac{r^2}{R^2} +\frac{h^2+(r\theta^2)}{H^2}+\frac{dr^2}{dR^2}   -3\right](2\pi RdR).
+\label{5}
+\end{equation}
+Thay (\ref{1}) và (\ref{2}) vào (\ref{5}):
+\begin{equation}
+\mathrm{d} U=\mu \pi H\left(2 \frac{H}{h}+\frac{h^2}{H^2}+\frac{R^2 \theta^2}{H h}-3\right) R \mathrm{d} R.
+\end{equation}
+Năng lượng đàn hồi của miếng cao su là:
+\begin{equation}
+U=\int_0^{R_0} \mathrm{d} U=\mu \pi H\left[\left(2 \frac{H}{h}+\frac{h^2}{H^2}-3\right) \frac{R_0^2}{2}+\frac{\theta^2}{H h} \frac{R_0^4}{4}\right].
+\end{equation}
+c. Năng lượng thế toàn phần:
+\begin{equation}
+E=U(h)-K(h)=U(h).
+\end{equation}
+Chiều cao $h$ có thể tìm được từ các điều kiện sau:
+\begin{equation}
+E^{\prime}(h)=\mu \pi R_0^2\left[-\frac{H^2}{h^2}+\frac{h}{H}-\frac{R_0^2 \theta^2}{4 h^2}\right]=0.
+\label{9}
+\end{equation}
+Sau khi xoắn miếng cao su, trạng thái cân bằng của nó là cân bằng bền nên phải thỏa điều kiện:
+\begin{equation}
+E^{\prime \prime}(h)=\mu \pi R_0^2\left[2 \frac{H}{h^3}+\frac{1}{H}+\frac{R_0^2 \theta^2}{2 h^3}\right] \geq 0.
+\label{10}
+\end{equation}
+Dễ thấy điều kiện ở (\ref{10}) luôn luôn được thỏa mãn. Từ (\ref{9}), chiều cao $h$ của miếng cao su sau khi biến dạng là:
+\begin{equation}
+h=H \sqrt[3]{1+\dfrac{R_0^2 \theta^2}{4 H^2}}.
+\end{equation}
+Với $R_0\ll H$ thì:
+\begin{equation}
+h \simeq H\left(1+\frac{R_0^2 \theta^2}{12 H^2}\right).
+\end{equation}
+
+%% Reference %%
+\bibliographystyle{plain}
+\begin{thebibliography}{}
+\bibitem{Zurlo} Zurlo, Giuseppe, et al. "The poynting effect." American Journal of Physics 88.12 (2020): 1036-1040.
+\end{thebibliography}
