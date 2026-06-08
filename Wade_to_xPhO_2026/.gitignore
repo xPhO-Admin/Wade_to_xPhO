@@ -27,6 +27,7 @@
 *.nav
 *.synctex.gz
 *.bcf
+*.synctex(busy)
 
 #Recordings:
 *.mp4
